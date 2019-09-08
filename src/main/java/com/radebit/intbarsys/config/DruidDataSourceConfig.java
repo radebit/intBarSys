@@ -18,7 +18,7 @@ import java.util.List;
 /**
  * @Author Rade
  * @Date 2019-09-07 22:36
- * 说明：
+ * 说明：Druid 配置
  */
 @Configuration
 public class DruidDataSourceConfig {

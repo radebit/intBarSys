@@ -1,0 +1,9 @@
+${AnsiColor.BRIGHT_YELLOW}  _____               _____    ______   ____    _____   _______
+${AnsiColor.BRIGHT_YELLOW} |  __ \      /\     |  __ \  |  ____| |  _ \  |_   _| |__   __|
+${AnsiColor.BRIGHT_YELLOW} | |__) |    /  \    | |  | | | |__    | |_) |   | |      | |
+${AnsiColor.BRIGHT_YELLOW} |  _  /    / /\ \   | |  | | |  __|   |  _ <    | |      | |
+${AnsiColor.BRIGHT_YELLOW} | | \ \   / ____ \  | |__| | | |____  | |_) |  _| |_     | |
+${AnsiColor.BRIGHT_YELLOW} |_|  \_\ /_/    \_\ |_____/  |______| |____/  |_____|    |_|
+
+${AnsiColor.BRIGHT_YELLOW}              浙江瑞泽网络科技    www.radebit.com
+
