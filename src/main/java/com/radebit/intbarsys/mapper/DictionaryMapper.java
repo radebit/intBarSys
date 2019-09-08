@@ -24,7 +24,7 @@ public interface DictionaryMapper {
      * @return
      */
     @Select("select * from r_dictionary where id = #{id}")
-    Dictionary findDicMapById(int id);
+    Dictionary findDicById(int id);
 
     /**
      * 通过Key找字典
@@ -32,7 +32,7 @@ public interface DictionaryMapper {
      * @return
      */
     @Select("select * from r_dictionary where key = #{key}")
-    String findDicByKey(String key);
+    Dictionary findDicByKey(String key);
 
     /**
      * 更新字典

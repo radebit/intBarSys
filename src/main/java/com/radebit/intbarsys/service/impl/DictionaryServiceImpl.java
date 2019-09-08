@@ -5,8 +5,6 @@ import com.radebit.intbarsys.model.po.Dictionary;
 import com.radebit.intbarsys.service.DictionaryService;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import java.util.Map;
-
 /**
  * @Author Rade
  * @Date 2019-09-08 11:37
@@ -18,28 +16,28 @@ public class DictionaryServiceImpl implements DictionaryService {
     private DictionaryMapper dictionaryMapper;
 
     @Override
-    public Map<String, String> findDicMapById(int id) {
-
-        return null;
+    public Dictionary findDicById(int id) {
+        return dictionaryMapper.findDicById(id);
     }
 
     @Override
     public String findDicByKey(String key) {
-        return null;
+        Dictionary dic = dictionaryMapper.findDicByKey(key);
+        return dic.getValue();
     }
 
     @Override
     public int update(Dictionary dictionary) {
-        return 0;
+        return dictionaryMapper.update(dictionary);
     }
 
     @Override
     public int delete(int id) {
-        return 0;
+        return dictionaryMapper.delete(id);
     }
 
     @Override
-    public int save(Dictionary rdictionary) {
-        return 0;
+    public int save(Dictionary dictionary) {
+        return dictionaryMapper.save(dictionary);
     }
 }

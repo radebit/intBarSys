@@ -2,7 +2,6 @@ package com.radebit.intbarsys.service;
 
 import com.radebit.intbarsys.model.po.Dictionary;
 
-import java.util.Map;
 
 /**
  * @Author Rade
@@ -16,7 +15,7 @@ public interface DictionaryService {
      * @param id
      * @return
      */
-    Map<String, String> findDicMapById(int id);
+    Dictionary findDicById(int id);
 
     /**
      * 通过Key拿Value
@@ -41,10 +40,10 @@ public interface DictionaryService {
 
     /**
      * 保存字典
-     * @param rdictionary
+     * @param dictionary
      * @return
      */
-    int save(Dictionary rdictionary);
+    int save(Dictionary dictionary);
 
 
 }
