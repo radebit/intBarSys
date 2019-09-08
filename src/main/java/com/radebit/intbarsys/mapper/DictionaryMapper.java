@@ -1,15 +1,13 @@
 package com.radebit.intbarsys.mapper;
 import com.radebit.intbarsys.model.po.Dictionary;
 import com.radebit.intbarsys.provider.DictionaryProvider;
-import org.apache.ibatis.annotations.Delete;
-import org.apache.ibatis.annotations.Select;
-import org.apache.ibatis.annotations.UpdateProvider;
+import org.apache.ibatis.annotations.*;
 
 import java.util.List;
 /**
  * @Author Rade
  * @Date 2019-09-08 11:39
- * 说明：
+ * 说明：字典表Mapper
  */
 public interface DictionaryMapper {
 
@@ -57,6 +55,8 @@ public interface DictionaryMapper {
      * @param dictionary
      * @return
      */
+    @Insert("INSERT INTO `intbarsys`.`r_dictionary`(`key`, `value`, `attach`, `note`) VALUES (#{key}, #{value}, #{attach}, #{note});")
+    @Options(useGeneratedKeys=true, keyProperty="id", keyColumn="id")
     int save(Dictionary dictionary);
 
 }
