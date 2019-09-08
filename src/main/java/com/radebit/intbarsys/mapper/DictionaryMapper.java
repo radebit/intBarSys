@@ -2,7 +2,6 @@ package com.radebit.intbarsys.mapper;
 import com.radebit.intbarsys.model.po.Dictionary;
 import com.radebit.intbarsys.provider.DictionaryProvider;
 import org.apache.ibatis.annotations.*;
-import org.springframework.context.annotation.Bean;
 
 import java.util.List;
 /**
@@ -33,7 +32,7 @@ public interface DictionaryMapper {
      * @param key
      * @return
      */
-    @Select("select * from r_dictionary where key = #{key}")
+    @Select("select * from r_dictionary where dic_key = #{dicKey}")
     Dictionary findDicByKey(String key);
 
     /**
@@ -57,7 +56,7 @@ public interface DictionaryMapper {
      * @param dictionary
      * @return
      */
-    @Insert("INSERT INTO `intbarsys`.`r_dictionary`(`key`, `value`, `attach`, `note`) VALUES (#{key}, #{value}, #{attach}, #{note});")
+    @Insert("INSERT INTO `intbarsys`.`r_dictionary`(`dic_key`, `dic_value`, `dic_attach`, `dic_note`) VALUES (#{dicKey}, #{dicValue}, #{dicAttach}, #{dicNote});")
     @Options(useGeneratedKeys=true, keyProperty="id", keyColumn="id")
     int save(Dictionary dictionary);
 

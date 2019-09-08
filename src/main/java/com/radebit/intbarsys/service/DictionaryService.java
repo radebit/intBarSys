@@ -20,10 +20,10 @@ public interface DictionaryService {
 
     /**
      * 通过Key拿Value
-     * @param key
+     * @param dicKey
      * @return
      */
-    String findDicByKey(String key);
+    String findDicByKey(String dicKey);
 
     /**
      * 更新字典

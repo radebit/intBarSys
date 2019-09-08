@@ -16,17 +16,17 @@ public class DictionaryProvider {
             UPDATE("r_dictionary");
 
             //条件写法.
-            if (dictionary.getKey() != null) {
-                SET("key=#{key}");
+            if (dictionary.getDicKey() != null) {
+                SET("dic_key=#{dicKey}");
             }
-            if (dictionary.getValue() != null) {
-                SET("value=#{value}");
+            if (dictionary.getDicValue() != null) {
+                SET("dic_value=#{dicValue}");
             }
-            if (dictionary.getAttach() != null) {
-                SET("attach=#{attach}");
+            if (dictionary.getDicAttach() != null) {
+                SET("dic_attach=#{dicAttach}");
             }
-            if (dictionary.getNote() != null) {
-                SET("note=#{note}");
+            if (dictionary.getDicNote() != null) {
+                SET("dic_note=#{dicNote}");
             }
 
             WHERE("id=#{id}");

@@ -23,9 +23,9 @@ public class DictionaryServiceImpl implements DictionaryService {
     }
 
     @Override
-    public String findDicByKey(String key) {
-        Dictionary dic = dictionaryMapper.findDicByKey(key);
-        return dic.getValue();
+    public String findDicByKey(String dicKey) {
+        Dictionary dic = dictionaryMapper.findDicByKey(dicKey);
+        return dic.getDicValue();
     }
 
     @Override
