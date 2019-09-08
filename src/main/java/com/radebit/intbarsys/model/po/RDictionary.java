@@ -6,7 +6,6 @@ import java.io.Serializable;
 public class RDictionary implements Serializable {
 
   private Integer id;
-  private String name;
   private String key;
   private String value;
   private String attach;
@@ -20,16 +19,6 @@ public class RDictionary implements Serializable {
   public void setId(Integer id) {
     this.id = id;
   }
-
-
-  public String getName() {
-    return name;
-  }
-
-  public void setName(String name) {
-    this.name = name;
-  }
-
 
   public String getKey() {
     return key;
