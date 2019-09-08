@@ -1,6 +1,6 @@
 package com.radebit.intbarsys.service.impl;
 
-import com.radebit.intbarsys.model.po.RDictionary;
+import com.radebit.intbarsys.model.po.Dictionary;
 import com.radebit.intbarsys.service.DictionaryService;
 
 import java.util.Map;
@@ -13,6 +13,7 @@ import java.util.Map;
 public class DictionaryServiceImpl implements DictionaryService {
     @Override
     public Map<String, String> findDicMapById(int id) {
+
         return null;
     }
 
@@ -22,7 +23,7 @@ public class DictionaryServiceImpl implements DictionaryService {
     }
 
     @Override
-    public int update(RDictionary rDictionary) {
+    public int update(Dictionary dictionary) {
         return 0;
     }
 
@@ -32,7 +33,7 @@ public class DictionaryServiceImpl implements DictionaryService {
     }
 
     @Override
-    public int save(RDictionary rdictionary) {
+    public int save(Dictionary rdictionary) {
         return 0;
     }
 }

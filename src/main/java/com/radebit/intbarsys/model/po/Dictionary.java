@@ -3,7 +3,7 @@ package com.radebit.intbarsys.model.po;
 
 import java.io.Serializable;
 
-public class RDictionary implements Serializable {
+public class Dictionary implements Serializable {
 
   private Integer id;
   private String key;

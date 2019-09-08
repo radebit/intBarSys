@@ -3,7 +3,7 @@ package com.radebit.intbarsys.model.po;
 
 import java.io.Serializable;
 
-public class RAdmin implements Serializable {
+public class Admin implements Serializable {
 
   private Integer id;
   private String username;

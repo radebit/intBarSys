@@ -1,6 +1,6 @@
 package com.radebit.intbarsys.service;
 
-import com.radebit.intbarsys.model.po.RDictionary;
+import com.radebit.intbarsys.model.po.Dictionary;
 
 import java.util.Map;
 
@@ -27,10 +27,10 @@ public interface DictionaryService {
 
     /**
      * 更新字典
-     * @param rDictionary
+     * @param dictionary
      * @return
      */
-    int update(RDictionary rDictionary);
+    int update(Dictionary dictionary);
 
     /**
      * 删除字典
@@ -44,7 +44,7 @@ public interface DictionaryService {
      * @param rdictionary
      * @return
      */
-    int save(RDictionary rdictionary);
+    int save(Dictionary rdictionary);
 
 
 }
