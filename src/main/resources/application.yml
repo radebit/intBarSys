@@ -1,3 +1,21 @@
+server:
+  port: 8080
 spring:
-  profiles:
-    active: dev
+  datasource:
+    url: jdbc:mysql://localhost:3306/intbarsys?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+
+# MyBatis配置驼峰命名法,控制台打印输出SQL语句
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+# 微信配置
+wechat:
+  appid: wxad0693e5004958c1
+  appsecret: 98dc911ac10294152f92cc5cca73a813
+  redirect_url: https://9032b0ea.ngrok.io/api/v1/wechat/codeCallBack

@@ -2,6 +2,7 @@ package com.radebit.intbarsys.mapper;
 import com.radebit.intbarsys.model.po.Dictionary;
 import com.radebit.intbarsys.provider.DictionaryProvider;
 import org.apache.ibatis.annotations.*;
+import org.springframework.context.annotation.Bean;
 
 import java.util.List;
 /**
@@ -9,6 +10,7 @@ import java.util.List;
  * @Date 2019-09-08 11:39
  * 说明：字典表Mapper
  */
+
 public interface DictionaryMapper {
 
     /**

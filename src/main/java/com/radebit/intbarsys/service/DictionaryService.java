@@ -1,6 +1,7 @@
 package com.radebit.intbarsys.service;
 
 import com.radebit.intbarsys.model.po.Dictionary;
+import org.springframework.stereotype.Service;
 
 
 /**
