@@ -1,6 +1,6 @@
 package com.radebit.intbarsys.mapper;
 import com.radebit.intbarsys.model.po.Dictionary;
-import com.radebit.intbarsys.provider.DictionaryProvider;
+import com.radebit.intbarsys.provider.UpdateProvider;
 import org.apache.ibatis.annotations.*;
 
 import java.util.List;
@@ -40,7 +40,7 @@ public interface DictionaryMapper {
      * @param dictionary
      * @return
      */
-    @UpdateProvider(type = DictionaryProvider.class,method = "updateDictionary")
+    @org.apache.ibatis.annotations.UpdateProvider(type = UpdateProvider.class,method = "updateDictionary")
     int update(Dictionary dictionary);
 
     /**
