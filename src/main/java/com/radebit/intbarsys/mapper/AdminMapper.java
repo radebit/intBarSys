@@ -12,7 +12,7 @@ import org.apache.ibatis.annotations.UpdateProvider;
 public interface AdminMapper {
 
     /**
-     * 通过ID找管理员账号
+     * 通过ID找管理员
      * @param id
      * @return
      */
@@ -20,11 +20,19 @@ public interface AdminMapper {
     Admin findAdminById(int id);
 
     /**
+     * 通过用户名找管理员
+     * @param username
+     * @return
+     */
+    @Select("select * from r_admin where username = #{username}")
+    Admin findAdminByUsername(String username);
+
+    /**
      * 更新管理员信息
      * @param admin
      * @return
      */
-    @UpdateProvider(type = UpdateProvider.class,method = "updateAdmin")
+    @org.apache.ibatis.annotations.UpdateProvider(type = com.radebit.intbarsys.provider.UpdateProvider.class,method = "updateAdmin")
     int update(Admin admin);
 
 

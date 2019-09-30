@@ -23,7 +23,7 @@ public class TestJwt {
 
     @Test
     public void testCheckJwt() {
-        Claims claims = JwtUtils.checkJWT("eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpbnRiYXJzeXMiLCJpZCI6MSwidXNlcm5hbWUiOiJyYWRlIiwiaWF0IjoxNTY3OTE0NTIxLCJleHAiOjE1Njg1MTkzMjF9._iy0L1Ug8clYvmap6hXS0vEDWNSZuARvKOC-YWibOYw");
+        Claims claims = JwtUtils.checkJWT("eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpbnRiYXJzeXMiLCJpZCI6MSwidXNlcm5hbWUiOiJyYWRlIiwiaWF0IjoxNTY4NzA2ODk3LCJleHAiOjE1NjkzMTE2OTd9.U9KnYvvqcrmxddaLmg3alIBuS7jTdUSCFAgMtpIefck\n");
         if (claims != null){
             System.out.println(claims);
 
