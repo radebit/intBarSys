@@ -15,9 +15,9 @@ public interface AdminService {
 
     boolean checkPassword(String username,String password);
 
-    Admin update(Admin admin);
+    Integer update(Admin admin);
 
-    int delete(int id);
+    Integer delete(int id);
 
-    int save(Admin admin);
+    Integer save(Admin admin);
 }

@@ -1,8 +1,9 @@
 package com.radebit.intbarsys.mapper;
 
 import com.radebit.intbarsys.model.po.Admin;
+import org.apache.ibatis.annotations.Insert;
+import org.apache.ibatis.annotations.Options;
 import org.apache.ibatis.annotations.Select;
-import org.apache.ibatis.annotations.UpdateProvider;
 
 /**
  * @Author Rade
@@ -28,12 +29,30 @@ public interface AdminMapper {
     Admin findAdminByUsername(String username);
 
     /**
+     * 通过用户名查找密码
+     * @param username
+     * @return
+     */
+    @Select("select password from r_admin where username = #{username}")
+    String findPasswordByUsername(String username);
+
+    /**
      * 更新管理员信息
      * @param admin
      * @return
      */
     @org.apache.ibatis.annotations.UpdateProvider(type = com.radebit.intbarsys.provider.UpdateProvider.class,method = "updateAdmin")
-    int update(Admin admin);
+    Integer update(Admin admin);
+
+
+    /**
+     * 新增管理员
+     * @param admin
+     * @return
+     */
+    @Insert("INSERT INTO `intbarsys`.`r_admin`( `username`, `password`, `last_login_time`, `last_login_ip`) VALUES ( #{username},#{password},#{lastLoginTime},#{lastLoginIp});")
+    @Options(useGeneratedKeys = true,keyProperty = "id",keyColumn = "id")
+    Integer save(Admin admin);
 
 
 }

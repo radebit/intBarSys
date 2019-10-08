@@ -1,7 +1,9 @@
 package com.radebit.intbarsys.model.po;
 
 
-public class Dictionary {
+import java.io.Serializable;
+
+public class Dictionary implements Serializable {
 
   private Integer id;
   private String dicKey;

@@ -1,5 +1,7 @@
 package com.radebit.intbarsys.service.impl;
 
+import cn.hutool.core.lang.Assert;
+import cn.hutool.crypto.SecureUtil;
 import com.radebit.intbarsys.mapper.AdminMapper;
 import com.radebit.intbarsys.model.po.Admin;
 import com.radebit.intbarsys.service.AdminService;
@@ -18,31 +20,36 @@ public class AdminServiceImpl implements AdminService {
 
     @Override
     public Admin findAdminById(int id) {
-        return null;
+        return adminMapper.findAdminById(id);
     }
 
     @Override
     public Admin findAdminByUsername(String username) {
-        return null;
+        return adminMapper.findAdminByUsername(username);
     }
 
     @Override
     public boolean checkPassword(String username, String password) {
-        return false;
+        String relPassword = adminMapper.findPasswordByUsername(username);
+        String md5Password = SecureUtil.md5(password);
+        if (relPassword == null){
+            return false;
+        }
+        return relPassword.equals(md5Password);
     }
 
     @Override
-    public Admin update(Admin admin) {
-        return null;
+    public Integer update(Admin admin) {
+        return adminMapper.update(admin);
     }
 
     @Override
-    public int delete(int id) {
+    public Integer delete(int id) {
         return 0;
     }
 
     @Override
-    public int save(Admin admin) {
-        return 0;
+    public Integer save(Admin admin) {
+        return adminMapper.save(admin);
     }
 }
