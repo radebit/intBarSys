@@ -8,6 +8,7 @@ import com.radebit.intbarsys.model.vo.AdminVO;
 import com.radebit.intbarsys.service.AdminService;
 import com.radebit.intbarsys.utils.IPUtils;
 import com.radebit.intbarsys.utils.JwtUtils;
+import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -20,6 +21,7 @@ import java.util.Date;
  * @Date 2019-09-30 23:19
  * 说明：
  */
+@Api(value = "管理员后台模块")
 @RestController
 @RequestMapping("/api/v1/admin")
 public class AdminController {
