@@ -1,6 +1,7 @@
 package com.radebit.intbarsys.controller;
 
 import cn.hutool.core.lang.Assert;
+import cn.hutool.crypto.SecureUtil;
 import com.alibaba.fastjson.JSON;
 import com.radebit.intbarsys.domain.JsonData;
 import com.radebit.intbarsys.model.po.Admin;
@@ -51,9 +52,15 @@ public class AdminController {
     }
 
     @PostMapping("addAdmin")
-    public String adminLogin(@RequestBody Admin admin){
-
-        return null;
+    public JsonData adminLogin(@RequestBody Admin admin){
+        Assert.notNull(admin);
+        admin.setPassword(SecureUtil.md5(admin.getPassword()));
+        System.out.println(admin.toString());
+        Integer state = adminService.save(admin);
+        if (state == 1){
+            return JsonData.buildSuccess(admin,"创建管理员成功！");
+        }
+        return JsonData.buildError("创建失败！",500);
 
     }
 
