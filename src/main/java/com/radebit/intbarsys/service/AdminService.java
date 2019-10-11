@@ -13,6 +13,8 @@ public interface AdminService {
 
     Admin findAdminByUsername(String username);
 
+    String findPasswordByUsername(String usernmae);
+
     boolean checkPassword(String username,String password);
 
     Integer update(Admin admin);

@@ -10,6 +10,7 @@ import com.radebit.intbarsys.service.AdminService;
 import com.radebit.intbarsys.utils.IPUtils;
 import com.radebit.intbarsys.utils.JwtUtils;
 import io.swagger.annotations.Api;
+import org.apache.ibatis.annotations.Delete;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -20,7 +21,7 @@ import java.util.Date;
 /**
  * @Author Rade
  * @Date 2019-09-30 23:19
- * 说明：
+ * 说明：管理员模块
  */
 @Api(value = "管理员后台模块")
 @RestController
@@ -30,6 +31,13 @@ public class AdminController {
     @Autowired
     private AdminService adminService;
 
+    /**
+     * 管理员登录
+     * @param username
+     * @param password
+     * @param request
+     * @return
+     */
     @PostMapping("adminLogin")
     public JsonData adminLogin(@RequestParam String username,
                                @RequestParam String password,
@@ -51,16 +59,87 @@ public class AdminController {
 
     }
 
+    /**
+     * 新增管理员
+     * @param username
+     * @param password
+     * @param request
+     * @return
+     */
     @PostMapping("addAdmin")
-    public JsonData adminLogin(@RequestBody Admin admin){
-        Assert.notNull(admin);
-        admin.setPassword(SecureUtil.md5(admin.getPassword()));
-        System.out.println(admin.toString());
+    public JsonData addAdmin(@RequestParam String username,
+                               @RequestParam String password,
+                               HttpServletRequest request){
+        Assert.notBlank(username);
+        Assert.notBlank(password);
+        if (adminService.findAdminByUsername(username)!=null){
+            return JsonData.buildError("管理员已存在！",301);
+        }
+        Admin admin = new Admin();
+        admin.setUsername(username);
+        admin.setPassword(SecureUtil.md5(password));
+        admin.setLastLoginTime(new Timestamp(new Date().getTime()));
+        admin.setLastLoginIp(IPUtils.getIpAddr(request));
         Integer state = adminService.save(admin);
         if (state == 1){
             return JsonData.buildSuccess(admin,"创建管理员成功！");
         }
-        return JsonData.buildError("创建失败！",500);
+        return JsonData.buildError("创建失败！",300);
+
+    }
+
+    /**
+     * 删除管理员
+     * @param id
+     * @return
+     */
+    @DeleteMapping("delAdmin")
+    public JsonData deleteAdmin(@RequestParam int id){
+        Assert.notNull(id);
+        if (id == 1){
+            return JsonData.buildError("请勿删除超级管理员！",500);
+        }
+        if (adminService.delete(id)==1){
+            return JsonData.buildSuccess(null,"删除成功！");
+        }
+        return JsonData.buildError("删除失败！",300);
+    }
+
+    /**
+     * 更新管理员信息
+     * @param oldUsername
+     * @param oldPassword
+     * @param newUsername
+     * @param newPassword
+     * @return
+     */
+    @PutMapping("updateAdmin")
+    public JsonData updateAdmin(@RequestParam String oldUsername,
+                                @RequestParam String oldPassword,
+                                @RequestParam String newUsername,
+                                @RequestParam String newPassword){
+        Assert.notBlank(oldUsername);
+        Assert.notBlank(oldPassword);
+        Assert.notBlank(newUsername);
+        Assert.notBlank(newPassword);
+
+        Admin admin = adminService.findAdminByUsername(oldUsername);
+
+        if (admin==null){
+            return JsonData.buildError("管理员不存在！",301);
+        }
+        if (!SecureUtil.md5(oldPassword).equals(adminService.findPasswordByUsername(oldUsername))){
+            return JsonData.buildError("原始密码不匹配",302);
+        }
+
+        admin.setUsername(newUsername);
+        admin.setPassword(SecureUtil.md5(newPassword));
+
+        Integer state = adminService.update(admin);
+        if (state == 1){
+            return JsonData.buildSuccess(admin,"编辑成功！");
+        }
+        return JsonData.buildError("编辑失败！",300);
 
     }
 

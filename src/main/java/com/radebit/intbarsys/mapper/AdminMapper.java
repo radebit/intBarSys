@@ -1,6 +1,7 @@
 package com.radebit.intbarsys.mapper;
 
 import com.radebit.intbarsys.model.po.Admin;
+import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Options;
 import org.apache.ibatis.annotations.Select;
@@ -44,6 +45,13 @@ public interface AdminMapper {
     @org.apache.ibatis.annotations.UpdateProvider(type = com.radebit.intbarsys.provider.UpdateProvider.class,method = "updateAdmin")
     Integer update(Admin admin);
 
+    /**
+     * 删除管理员
+     * @param id
+     * @return
+     */
+    @Delete("delete from r_admin where id = #{id}")
+    Integer delete(int id);
 
     /**
      * 新增管理员

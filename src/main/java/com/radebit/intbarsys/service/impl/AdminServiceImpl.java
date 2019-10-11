@@ -29,6 +29,11 @@ public class AdminServiceImpl implements AdminService {
     }
 
     @Override
+    public String findPasswordByUsername(String usernmae) {
+        return adminMapper.findPasswordByUsername(usernmae);
+    }
+
+    @Override
     public boolean checkPassword(String username, String password) {
         String relPassword = adminMapper.findPasswordByUsername(username);
         String md5Password = SecureUtil.md5(password);
@@ -45,7 +50,7 @@ public class AdminServiceImpl implements AdminService {
 
     @Override
     public Integer delete(int id) {
-        return 0;
+        return adminMapper.delete(id);
     }
 
     @Override
