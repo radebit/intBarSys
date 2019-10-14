@@ -56,14 +56,4 @@ public class Admin implements Serializable {
     this.lastLoginIp = lastLoginIp;
   }
 
-  @Override
-  public String toString() {
-    return "Admin{" +
-            "id=" + id +
-            ", username='" + username + '\'' +
-            ", password='" + password + '\'' +
-            ", lastLoginTime=" + lastLoginTime +
-            ", lastLoginIp='" + lastLoginIp + '\'' +
-            '}';
-  }
 }

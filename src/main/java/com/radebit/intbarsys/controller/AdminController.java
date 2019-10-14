@@ -10,7 +10,6 @@ import com.radebit.intbarsys.service.AdminService;
 import com.radebit.intbarsys.utils.IPUtils;
 import com.radebit.intbarsys.utils.JwtUtils;
 import io.swagger.annotations.Api;
-import org.apache.ibatis.annotations.Delete;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
