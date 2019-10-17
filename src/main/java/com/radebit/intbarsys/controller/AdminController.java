@@ -38,8 +38,8 @@ public class AdminController {
      * @return
      */
     @PostMapping("adminLogin")
-    public JsonData adminLogin(@RequestParam String username,
-                               @RequestParam String password,
+    public JsonData adminLogin(@RequestParam(value = "username",required = true) String username,
+                               @RequestParam(value = "password",required = true) String password,
                                HttpServletRequest request){
         Assert.notBlank(username);
         Assert.notBlank(password);
@@ -66,8 +66,8 @@ public class AdminController {
      * @return
      */
     @PostMapping("addAdmin")
-    public JsonData addAdmin(@RequestParam String username,
-                               @RequestParam String password,
+    public JsonData addAdmin(@RequestParam(value = "username",required = true) String username,
+                               @RequestParam(value = "password",required = true) String password,
                                HttpServletRequest request){
         Assert.notBlank(username);
         Assert.notBlank(password);
@@ -93,7 +93,7 @@ public class AdminController {
      * @return
      */
     @DeleteMapping("delAdmin")
-    public JsonData deleteAdmin(@RequestParam int id){
+    public JsonData deleteAdmin(@RequestParam(value = "id",required = true) int id){
         Assert.notNull(id);
         if (id == 1){
             return JsonData.buildError("请勿删除超级管理员！",500);
@@ -113,10 +113,10 @@ public class AdminController {
      * @return
      */
     @PutMapping("updateAdmin")
-    public JsonData updateAdmin(@RequestParam String oldUsername,
-                                @RequestParam String oldPassword,
-                                @RequestParam String newUsername,
-                                @RequestParam String newPassword){
+    public JsonData updateAdmin(@RequestParam(value = "oldUsername",required = true) String oldUsername,
+                                @RequestParam(value = "oldPassword",required = true) String oldPassword,
+                                @RequestParam(value = "newUsername",required = true) String newUsername,
+                                @RequestParam(value = "newPassword",required = true) String newPassword){
         Assert.notBlank(oldUsername);
         Assert.notBlank(oldPassword);
         Assert.notBlank(newUsername);

@@ -13,6 +13,8 @@ public interface ActivityService {
 
     Activity findActivityById(int id);
 
+    List<Activity> findAll();
+
     List<Activity> findActivityListByTitle(String title);
 
     Integer update(Activity activity);

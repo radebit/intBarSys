@@ -18,6 +18,9 @@ public interface ActivityMapper {
     @Select("select * from r_activity where id = #{id}")
     Activity findActivityById(int id);
 
+    @Select("select * from r_activity")
+    List<Activity> findAll();
+
     @Select("select * from r_activity where title like '%#{title}%'")
     List<Activity> findActivityListByTitle(String title);
 

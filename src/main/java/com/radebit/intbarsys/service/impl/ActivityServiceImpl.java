@@ -1,7 +1,9 @@
 package com.radebit.intbarsys.service.impl;
 
+import com.radebit.intbarsys.mapper.ActivityMapper;
 import com.radebit.intbarsys.model.po.Activity;
 import com.radebit.intbarsys.service.ActivityService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -13,28 +15,37 @@ import java.util.List;
  */
 @Service
 public class ActivityServiceImpl implements ActivityService {
+
+    @Autowired
+    private ActivityMapper activityMapper;
+
     @Override
     public Activity findActivityById(int id) {
-        return null;
+        return activityMapper.findActivityById(id);
+    }
+
+    @Override
+    public List<Activity> findAll() {
+        return activityMapper.findAll();
     }
 
     @Override
     public List<Activity> findActivityListByTitle(String title) {
-        return null;
+        return activityMapper.findActivityListByTitle(title);
     }
 
     @Override
     public Integer update(Activity activity) {
-        return null;
+        return activityMapper.update(activity);
     }
 
     @Override
     public Integer delete(int id) {
-        return null;
+        return activityMapper.delete(id);
     }
 
     @Override
     public Integer save(Activity activity) {
-        return null;
+        return activityMapper.save(activity);
     }
 }
