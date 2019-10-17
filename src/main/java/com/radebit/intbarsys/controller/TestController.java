@@ -2,6 +2,7 @@ package com.radebit.intbarsys.controller;
 
 import com.radebit.intbarsys.model.po.Dictionary;
 import com.radebit.intbarsys.service.DictionaryService;
+import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @Date 2019-09-08 10:55
  * 说明：测试接口
  */
+@Api(value = "测试接口模块")
 @RestController
 @RequestMapping("/api/v1/test")
 public class TestController {
