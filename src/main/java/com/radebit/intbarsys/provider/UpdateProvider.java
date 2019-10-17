@@ -1,5 +1,6 @@
 package com.radebit.intbarsys.provider;
 
+import com.radebit.intbarsys.model.po.Activity;
 import com.radebit.intbarsys.model.po.Admin;
 import com.radebit.intbarsys.model.po.Dictionary;
 import org.apache.ibatis.jdbc.SQL;
@@ -13,6 +14,7 @@ public class UpdateProvider {
 
     /**
      * 字典表条件更新
+     *
      * @param dictionary
      * @return
      */
@@ -42,6 +44,7 @@ public class UpdateProvider {
 
     /**
      * 管理员表条件动态更新
+     *
      * @param admin
      * @return
      */
@@ -64,6 +67,75 @@ public class UpdateProvider {
             }
 
             WHERE("id = #{id}");
+        }}.toString();
+    }
+
+    /**
+     * 比赛活动表条件动态更新
+     *
+     * @param activity
+     * @return
+     */
+    public String updateActivity(final Activity activity) {
+        return new SQL() {{
+            UPDATE("r_activity");
+
+            if (activity.getTitle() != null) {
+                SET("title = #{title}");
+            }
+            if (activity.getCategory() != null) {
+                SET("category = #{category}");
+            }
+            if (activity.getRegMethod() != null) {
+                SET("reg_method = #{reg_method}");
+            }
+            if (activity.getFormat() != null) {
+                SET("format = #{format}");
+            }
+            if (activity.getContact() != null) {
+                SET("contact = #{contact}");
+            }
+            if (activity.getPhone() != null) {
+                SET("phone = #{phone}");
+            }
+            if (activity.getStartTime() != null) {
+                SET("start_time = #{start_time}");
+            }
+            if (activity.getEndTime() != null) {
+                SET("end_time = #{end_time}");
+            }
+            if (activity.getPlace() != null) {
+                SET("place = #{place}");
+            }
+            if (activity.getRewardFirst() != null) {
+                SET("reward_first = #{reward_first}");
+            }
+            if (activity.getRewardSecond() != null) {
+                SET("reward_second = #{reward_second}");
+            }
+            if (activity.getRewardThird() != null) {
+                SET("reward_third = #{reward_third}");
+            }
+            if (activity.getRewardOther() != null) {
+                SET("reward_other = #{reward_other}");
+            }
+            if (activity.getDetails() != null) {
+                SET("details = #{details}");
+            }
+            if (activity.getAttention() != null) {
+                SET("attention = #{attention}");
+            }
+            if (activity.getLogo() != null) {
+                SET("logo = #{logo}");
+            }
+            if (activity.getBanner() != null) {
+                SET("banner = #{banner}");
+            }
+            if (activity.getRules() != null) {
+                SET("rules = #{rules}");
+            }
+
+            WHERE("id = id");
         }}.toString();
     }
 }

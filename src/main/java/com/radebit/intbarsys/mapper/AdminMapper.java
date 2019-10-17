@@ -58,7 +58,7 @@ public interface AdminMapper {
      * @param admin
      * @return
      */
-    @Insert("INSERT INTO `intbarsys`.`r_admin`( `username`, `password`, `last_login_time`, `last_login_ip`) VALUES ( #{username},#{password},#{lastLoginTime},#{lastLoginIp});")
+    @Insert("INSERT INTO r_admin( `username`, `password`, `last_login_time`, `last_login_ip`) VALUES ( #{username},#{password},#{lastLoginTime},#{lastLoginIp})")
     @Options(useGeneratedKeys = true,keyProperty = "id",keyColumn = "id")
     Integer save(Admin admin);
 

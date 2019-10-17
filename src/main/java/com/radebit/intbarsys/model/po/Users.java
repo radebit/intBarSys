@@ -16,6 +16,8 @@ public class Users {
   private java.sql.Timestamp birthday;
   private String email;
   private String address;
+  private String portrait;
+  private String introduction;
 
 
   public Integer getId() {
@@ -134,4 +136,19 @@ public class Users {
     this.address = address;
   }
 
+  public String getPortrait() {
+    return portrait;
+  }
+
+  public void setPortrait(String portrait) {
+    this.portrait = portrait;
+  }
+
+  public String getIntroduction() {
+    return introduction;
+  }
+
+  public void setIntroduction(String introduction) {
+    this.introduction = introduction;
+  }
 }
