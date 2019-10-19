@@ -1,5 +1,6 @@
 package com.radebit.intbarsys.utils;
 
+import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -50,6 +51,22 @@ public class DateTimeUtils {
         long time = System.currentTimeMillis();
         String t = String.valueOf(time/1000);
         return t;
+    }
+
+    /**
+     * string转TimeStamp
+     * @param time
+     * @return
+     */
+    public static Timestamp stringToTimeStamp(String time){
+        Timestamp ts = new Timestamp(System.currentTimeMillis());
+        try {
+            ts = Timestamp.valueOf(time);
+            System.out.println(ts);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return ts;
     }
 
 

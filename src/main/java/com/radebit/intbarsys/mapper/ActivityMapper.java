@@ -30,7 +30,7 @@ public interface ActivityMapper {
     @Delete("delete from r_activity where id = #{id}")
     Integer delete(int id);
 
-    @Insert("INSERT INTO r_activity(`title`, `category`, `reg_method`, `format`, `contact`, `phone`, `start_time`, `end_time`, `place`, `reward_first`, `reward_second`, `reward_third`, `reward_other`, `details`, `attention`, `logo`, `banner`, `rules`) VALUES (#{title},#{category},#{reg_method},#{format},#{contact},#{phone},#{start_time},#{end_time},#{place},#{reward_first},#{reward_second},#{reward_third},#{reward_other},#{details},#{attention},#{logo},#{banner},#{rules})")
+    @Insert("INSERT INTO r_activity(`title`, `category`, `reg_method`, `format`, `contact`, `phone`, `start_time`, `end_time`, `place`, `reward_first`, `reward_second`, `reward_third`, `reward_other`, `details`, `attention`, `logo`, `banner`, `rules`) VALUES (#{title},#{category},#{regMethod},#{format},#{contact},#{phone},#{startTime},#{endTime},#{place},#{rewardFirst},#{rewardSecond},#{rewardThird},#{rewardOther},#{details},#{attention},#{logo},#{banner},#{rules})")
     @Options(useGeneratedKeys = true,keyProperty = "id",keyColumn = "id")
     Integer save(Activity activity);
 
