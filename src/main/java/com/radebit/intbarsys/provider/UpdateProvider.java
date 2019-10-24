@@ -87,7 +87,7 @@ public class UpdateProvider {
                 SET("category = #{category}");
             }
             if (activity.getRegMethod() != null) {
-                SET("reg_method = #{reg_method}");
+                SET("reg_method = #{regMethod}");
             }
             if (activity.getFormat() != null) {
                 SET("format = #{format}");
@@ -99,25 +99,25 @@ public class UpdateProvider {
                 SET("phone = #{phone}");
             }
             if (activity.getStartTime() != null) {
-                SET("start_time = #{start_time}");
+                SET("start_time = #{startTime}");
             }
             if (activity.getEndTime() != null) {
-                SET("end_time = #{end_time}");
+                SET("end_time = #{endTime}");
             }
             if (activity.getPlace() != null) {
                 SET("place = #{place}");
             }
             if (activity.getRewardFirst() != null) {
-                SET("reward_first = #{reward_first}");
+                SET("reward_first = #{rewardFirst}");
             }
             if (activity.getRewardSecond() != null) {
-                SET("reward_second = #{reward_second}");
+                SET("reward_second = #{rewardSecond}");
             }
             if (activity.getRewardThird() != null) {
-                SET("reward_third = #{reward_third}");
+                SET("reward_third = #{rewardThird}");
             }
             if (activity.getRewardOther() != null) {
-                SET("reward_other = #{reward_other}");
+                SET("reward_other = #{rewardOther}");
             }
             if (activity.getDetails() != null) {
                 SET("details = #{details}");
@@ -135,7 +135,7 @@ public class UpdateProvider {
                 SET("rules = #{rules}");
             }
 
-            WHERE("id = id");
+            WHERE("id = #{id}");
         }}.toString();
     }
 }

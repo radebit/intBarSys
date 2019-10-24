@@ -1,5 +1,6 @@
 package com.radebit.intbarsys.controller;
 
+import cn.hutool.core.lang.Assert;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.radebit.intbarsys.domain.JsonData;
@@ -87,4 +88,75 @@ public class ActivityController {
         return JsonData.buildError("创建比赛失败！");
     }
 
+    @GetMapping("getActivity")
+    public JsonData getActivity(@RequestParam(value = "id",required = true) int id){
+        Activity activity = activityService.findActivityById(id);
+        if (activity==null){
+            return JsonData.buildError("没有找到相关比赛！");
+        }
+        return JsonData.buildSuccess(activity);
+    }
+
+    @DeleteMapping("deleteActivity")
+    public JsonData deleteActivity(@RequestParam(value = "id",required = true) int id){
+        Assert.notNull(id);
+        if (activityService.delete(id)==1){
+            return JsonData.buildSuccess(null,"删除成功！");
+        }
+        return JsonData.buildError("删除失败！",300);
+    }
+
+    @PutMapping("updateActivity")
+    public JsonData updateActivity(@RequestParam(value = "id", required = true) int id,
+                                @RequestParam(value = "title", required = false) String title,
+                                @RequestParam(value = "category", required = false) int category,
+                                @RequestParam(value = "reg_method", required = false) int regMethod,
+                                @RequestParam(value = "format", required = false) int format,
+                                @RequestParam(value = "contact", required = false) String contact,
+                                @RequestParam(value = "phone", required = false) String phone,
+                                @RequestParam(value = "start_time", required = false) String startTime,
+                                @RequestParam(value = "end_time", required = false) String endTime,
+                                @RequestParam(value = "place", required = false) String place,
+                                @RequestParam(value = "reward_first", required = false) String rewardFirst,
+                                @RequestParam(value = "reward_second", required = false) String rewardSecond,
+                                @RequestParam(value = "reward_third", required = false) String rewardThird,
+                                @RequestParam(value = "reward_other", required = false) String rewardOther,
+                                @RequestParam(value = "details", required = false) String details,
+                                @RequestParam(value = "attention", required = false) String attention,
+                                @RequestParam(value = "logo", required = false) String logo,
+                                @RequestParam(value = "banner", required = false) String banner,
+                                @RequestParam(value = "rules", required = false) String rules) {
+        Assert.notNull(id);
+
+        Activity activity = activityService.findActivityById(id);
+        if (activity==null){
+            return JsonData.buildError("比赛活动不存在",301);
+        }
+        activity.setId(id);
+        activity.setTitle(title);
+        activity.setCategory(category);
+        activity.setRegMethod(regMethod);
+        activity.setFormat(format);
+        activity.setContact(contact);
+        activity.setPhone(phone);
+        activity.setStartTime(Timestamp.valueOf(startTime));
+        activity.setEndTime(Timestamp.valueOf(endTime));
+        activity.setPlace(place);
+        activity.setRewardFirst(rewardFirst);
+        activity.setRewardSecond(rewardSecond);
+        activity.setRewardThird(rewardThird);
+        activity.setRewardOther(rewardOther);
+        activity.setDetails(details);
+        activity.setAttention(attention);
+        activity.setLogo(logo);
+        activity.setBanner(banner);
+        activity.setRules(rules);
+
+        if (activityService.update(activity)==1){
+            Activity newActivity = activityService.findActivityById(id);
+            return JsonData.buildSuccess(newActivity,"编辑成功！");
+        }
+
+        return JsonData.buildError("编辑失败！");
+    }
 }
