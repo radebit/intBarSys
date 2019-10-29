@@ -7,11 +7,13 @@ import com.radebit.intbarsys.domain.JsonData;
 import com.radebit.intbarsys.model.po.Admin;
 import com.radebit.intbarsys.model.vo.AdminVO;
 import com.radebit.intbarsys.service.AdminService;
+import com.radebit.intbarsys.utils.ConstantKit;
 import com.radebit.intbarsys.utils.IPUtils;
-import com.radebit.intbarsys.utils.JwtUtils;
+import com.radebit.intbarsys.utils.Md5TokenGenerator;
 import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import redis.clients.jedis.Jedis;
 
 import javax.servlet.http.HttpServletRequest;
 import java.sql.Timestamp;
@@ -30,6 +32,9 @@ public class AdminController {
     @Autowired
     private AdminService adminService;
 
+    @Autowired
+    Md5TokenGenerator tokenGenerator;
+
     /**
      * 管理员登录
      * @param username
@@ -46,7 +51,20 @@ public class AdminController {
         boolean isCheck = adminService.checkPassword(username, password);
         if (isCheck){
             Admin admin = adminService.findAdminByUsername(username);
-            String token = JwtUtils.geneAdminJWT(admin);
+            //Token登录鉴权
+            Jedis jedis = new Jedis("127.0.0.1", 6379);
+            String token = tokenGenerator.generate(username, password);
+            jedis.set(username, token);
+            //设置key生存时间，当key过期时，它会被自动删除，时间是秒
+            jedis.expire(username, ConstantKit.TOKEN_EXPIRE_TIME);
+            jedis.set(token, username);
+            jedis.expire(token, ConstantKit.TOKEN_EXPIRE_TIME);
+            Long currentTime = System.currentTimeMillis();
+            jedis.set(token + username, currentTime.toString());
+
+            //用完关闭
+            jedis.close();
+
             admin.setLastLoginTime(new Timestamp(new Date().getTime()));
             admin.setLastLoginIp(IPUtils.getIpAddr(request));
             adminService.update(admin);

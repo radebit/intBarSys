@@ -1,13 +1,12 @@
 package com.radebit.intbarsys.controller;
 
+import com.radebit.intbarsys.controller.annotation.AuthToken;
+import com.radebit.intbarsys.domain.JsonData;
 import com.radebit.intbarsys.model.po.Dictionary;
 import com.radebit.intbarsys.service.DictionaryService;
 import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @Author Rade
@@ -35,5 +34,11 @@ public class TestController {
     @GetMapping("getDicByKey")
     public String getDicById(@RequestParam(value = "key",required = true) String key) {
         return dictionaryService.findDicByKey(key);
+    }
+
+    @PostMapping("testHasToken")
+    @AuthToken
+    public JsonData testHasToken(){
+        return JsonData.buildSuccess("成功访问");
     }
 }
