@@ -29,8 +29,8 @@ public class AdminServiceImpl implements AdminService {
     }
 
     @Override
-    public String findPasswordByUsername(String usernmae) {
-        return adminMapper.findPasswordByUsername(usernmae);
+    public String findPasswordByUsername(String username) {
+        return adminMapper.findPasswordByUsername(username);
     }
 
     @Override

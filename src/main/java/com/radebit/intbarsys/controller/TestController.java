@@ -3,7 +3,9 @@ package com.radebit.intbarsys.controller;
 import com.radebit.intbarsys.controller.annotation.AdminToken;
 import com.radebit.intbarsys.controller.annotation.AuthToken;
 import com.radebit.intbarsys.domain.JsonData;
+import com.radebit.intbarsys.model.po.Admin;
 import com.radebit.intbarsys.model.po.Dictionary;
+import com.radebit.intbarsys.service.AdminService;
 import com.radebit.intbarsys.service.DictionaryService;
 import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +23,9 @@ public class TestController {
 
     @Autowired
     private DictionaryService dictionaryService;
+
+    @Autowired
+    private AdminService adminService;
 
     @GetMapping("hello")
     public String test(){
@@ -41,5 +46,11 @@ public class TestController {
     @AuthToken
     public JsonData testHasToken(){
         return JsonData.buildSuccess("成功访问");
+    }
+
+    @GetMapping("adminInfo")
+    public JsonData testAdminInfo(){
+        Admin admin = adminService.findAdminByUsername("admin");
+        return JsonData.buildSuccess(admin);
     }
 }

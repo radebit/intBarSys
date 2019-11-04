@@ -1,13 +1,11 @@
 package com.radebit.intbarsys.intercepter;
 
-import cn.hutool.json.JSONObject;
 import com.radebit.intbarsys.controller.annotation.AdminToken;
-import com.radebit.intbarsys.controller.annotation.AuthToken;
 import com.radebit.intbarsys.service.AdminService;
 import com.radebit.intbarsys.utils.ConstantKit;
+import com.radebit.intbarsys.utils.TokenError;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
@@ -15,7 +13,6 @@ import redis.clients.jedis.Jedis;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.PrintWriter;
 import java.lang.reflect.Method;
 
 /**
@@ -25,6 +22,10 @@ import java.lang.reflect.Method;
  */
 @Slf4j
 public class AdminAuthInterceptor implements HandlerInterceptor {
+
+    @Autowired
+    private AdminService adminService;
+
     //存放鉴权信息的Header名称，默认是Authorization
     private String httpHeaderName = "Authorization";
 
@@ -33,8 +34,6 @@ public class AdminAuthInterceptor implements HandlerInterceptor {
 
     //鉴权失败后返回的HTTP错误码，默认为401
     private int unauthorizedErrorCode = HttpServletResponse.SC_UNAUTHORIZED;
-
-    private AdminService adminService;
 
     /**
      * 存放登录用户模型Key的Request Key
@@ -49,22 +48,31 @@ public class AdminAuthInterceptor implements HandlerInterceptor {
         HandlerMethod handlerMethod = (HandlerMethod) handler;
         Method method = handlerMethod.getMethod();
 
-        // 如果打上了AuthToken注解则需要验证token
+        // 如果打上了AdminToken注解则需要验证token
         if (method.getAnnotation(AdminToken.class) != null || handlerMethod.getBeanType().getAnnotation(AdminToken.class) != null) {
 
             String adminToken = request.getParameter(httpHeaderName);
             log.info("管理员请求token - {} ", adminToken);
-            String username = "";
-            Jedis jedis = new Jedis("127.0.0.1", 6379);
-            if (adminToken != null && adminToken.length() != 0) {
-                username = jedis.get(adminToken);
-                log.info("管理员用户 - {}", username);
-            }
-            //判断是否为管理员用户
-            if (username != null && adminService.findAdminByUsername(username.trim())==null){
+            //判断Token是否为空
+            if (adminToken == null) {
+                TokenError.printError(response, 450, "Token isEmpty!");
                 return false;
             }
-            if (username != null && !username.trim().equals("")) {
+            //连接Redis取出username
+            Jedis jedis = new Jedis("127.0.0.1", 6379);
+            String username = jedis.get(adminToken);
+            log.info("管理员用户 - {}", username);
+            //判断用户是否为空
+            if (username == null || username.isEmpty()) {
+                TokenError.printError(response, 450, "Token invalid!");
+                return false;
+            }
+            //判断是否为管理员用户
+            if (adminService.findAdminByUsername(username) == null) {
+                TokenError.printError(response, 451, "Not administrator user!");
+                return false;
+            }
+            if (!username.trim().equals("")) {
                 Long tokeBirthTime = Long.valueOf(jedis.get(adminToken + username));
                 log.info("adminToken创建时间 - {}", tokeBirthTime);
                 Long diff = System.currentTimeMillis() - tokeBirthTime;
@@ -77,34 +85,13 @@ public class AdminAuthInterceptor implements HandlerInterceptor {
                     Long newBirthTime = System.currentTimeMillis();
                     jedis.set(adminToken + username, newBirthTime.toString());
                 }
-
                 //用完关闭
                 jedis.close();
                 request.setAttribute(REQUEST_CURRENT_KEY, username);
                 return true;
             } else {
-                JSONObject jsonObject = new JSONObject();
-
-                PrintWriter out = null;
-                try {
-                    response.setStatus(unauthorizedErrorCode);
-                    response.setContentType(MediaType.APPLICATION_JSON_VALUE);
-
-                    jsonObject.put("code", ((HttpServletResponse) response).getStatus());
-                    jsonObject.put("message", HttpStatus.UNAUTHORIZED);
-                    out = response.getWriter();
-                    out.println(jsonObject);
-
-                    return false;
-                } catch (Exception e) {
-                    e.printStackTrace();
-                } finally {
-                    if (null != out) {
-                        out.flush();
-                        out.close();
-                    }
-                }
-
+                TokenError.printError(response, 450, "Token invalid!");
+                return false;
             }
 
         }
@@ -115,12 +102,14 @@ public class AdminAuthInterceptor implements HandlerInterceptor {
     }
 
     @Override
-    public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView) throws Exception {
+    public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView
+            modelAndView) throws Exception {
 
     }
 
     @Override
-    public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) throws Exception {
+    public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception
+            ex) throws Exception {
 
     }
 }

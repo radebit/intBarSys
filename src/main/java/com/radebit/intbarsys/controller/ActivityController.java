@@ -3,6 +3,7 @@ package com.radebit.intbarsys.controller;
 import cn.hutool.core.lang.Assert;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+import com.radebit.intbarsys.controller.annotation.AdminToken;
 import com.radebit.intbarsys.domain.JsonData;
 import com.radebit.intbarsys.model.po.Activity;
 import com.radebit.intbarsys.service.ActivityService;
@@ -43,6 +44,7 @@ public class ActivityController {
         return JsonData.buildSuccess(data);
     }
 
+    @AdminToken
     @PostMapping("addActivity")
     public JsonData addActivity(@RequestParam(value = "title", required = true) String title,
                                 @RequestParam(value = "category", required = true) int category,
@@ -97,6 +99,7 @@ public class ActivityController {
         return JsonData.buildSuccess(activity);
     }
 
+    @AdminToken
     @DeleteMapping("deleteActivity")
     public JsonData deleteActivity(@RequestParam(value = "id",required = true) int id){
         Assert.notNull(id);
@@ -106,6 +109,7 @@ public class ActivityController {
         return JsonData.buildError("删除失败！",300);
     }
 
+    @AdminToken
     @PutMapping("updateActivity")
     public JsonData updateActivity(@RequestParam(value = "id", required = true) int id,
                                 @RequestParam(value = "title", required = false) String title,

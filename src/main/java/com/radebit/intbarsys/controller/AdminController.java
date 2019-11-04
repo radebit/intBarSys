@@ -3,6 +3,7 @@ package com.radebit.intbarsys.controller;
 import cn.hutool.core.lang.Assert;
 import cn.hutool.crypto.SecureUtil;
 import com.alibaba.fastjson.JSON;
+import com.radebit.intbarsys.controller.annotation.AdminToken;
 import com.radebit.intbarsys.domain.JsonData;
 import com.radebit.intbarsys.model.po.Admin;
 import com.radebit.intbarsys.model.vo.AdminVO;
@@ -83,6 +84,7 @@ public class AdminController {
      * @param request
      * @return
      */
+    @AdminToken
     @PostMapping("addAdmin")
     public JsonData addAdmin(@RequestParam(value = "username",required = true) String username,
                                @RequestParam(value = "password",required = true) String password,
@@ -110,6 +112,7 @@ public class AdminController {
      * @param id
      * @return
      */
+    @AdminToken
     @DeleteMapping("delAdmin")
     public JsonData deleteAdmin(@RequestParam(value = "id",required = true) int id){
         Assert.notNull(id);
@@ -130,6 +133,7 @@ public class AdminController {
      * @param newPassword
      * @return
      */
+    @AdminToken
     @PutMapping("updateAdmin")
     public JsonData updateAdmin(@RequestParam(value = "oldUsername",required = true) String oldUsername,
                                 @RequestParam(value = "oldPassword",required = true) String oldPassword,
