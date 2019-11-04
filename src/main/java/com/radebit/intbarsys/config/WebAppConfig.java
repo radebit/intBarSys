@@ -1,5 +1,6 @@
 package com.radebit.intbarsys.config;
 
+import com.radebit.intbarsys.intercepter.AdminAuthInterceptor;
 import com.radebit.intbarsys.intercepter.AuthorizationInterceptor;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
@@ -15,5 +16,6 @@ public class WebAppConfig implements WebMvcConfigurer {
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(new AuthorizationInterceptor()).addPathPatterns("/**");
+        registry.addInterceptor(new AdminAuthInterceptor()).addPathPatterns("/**");
     }
 }

@@ -51,16 +51,16 @@ public class AdminController {
         boolean isCheck = adminService.checkPassword(username, password);
         if (isCheck){
             Admin admin = adminService.findAdminByUsername(username);
-            //Token登录鉴权
+            //adminToken登录鉴权
             Jedis jedis = new Jedis("127.0.0.1", 6379);
-            String token = tokenGenerator.generate(username, password);
-            jedis.set(username, token);
+            String adminToken = tokenGenerator.generate(username, password);
+            jedis.set(username, adminToken);
             //设置key生存时间，当key过期时，它会被自动删除，时间是秒
             jedis.expire(username, ConstantKit.TOKEN_EXPIRE_TIME);
-            jedis.set(token, username);
-            jedis.expire(token, ConstantKit.TOKEN_EXPIRE_TIME);
+            jedis.set(adminToken, username);
+            jedis.expire(adminToken, ConstantKit.TOKEN_EXPIRE_TIME);
             Long currentTime = System.currentTimeMillis();
-            jedis.set(token + username, currentTime.toString());
+            jedis.set(adminToken + username, currentTime.toString());
 
             //用完关闭
             jedis.close();
@@ -68,7 +68,7 @@ public class AdminController {
             admin.setLastLoginTime(new Timestamp(new Date().getTime()));
             admin.setLastLoginIp(IPUtils.getIpAddr(request));
             adminService.update(admin);
-            AdminVO adminVO = PoToVo(admin, token);
+            AdminVO adminVO = PoToVo(admin, adminToken);
             return JsonData.buildSuccess(JSON.toJSON(adminVO),0,"登录成功！");
         }else {
             return JsonData.buildError("账号或密码错误！",-1);

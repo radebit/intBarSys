@@ -1,5 +1,6 @@
 package com.radebit.intbarsys.controller;
 
+import com.radebit.intbarsys.controller.annotation.AdminToken;
 import com.radebit.intbarsys.controller.annotation.AuthToken;
 import com.radebit.intbarsys.domain.JsonData;
 import com.radebit.intbarsys.model.po.Dictionary;
