@@ -1,0 +1,243 @@
+2019-11-14 09:12:29.510 INFO [restartedMain]com.radebit.intbarsys.IntbarsysApplication.logStarting:50 -Starting IntbarsysApplication on RadedeMacBook-Pro.local with PID 1636 (/Users/rade/Documents/JavaEE/intBarSys/target/classes started by rade in /Users/rade/Documents/JavaEE/intBarSys)
+2019-11-14 09:12:29.513 INFO [restartedMain]com.radebit.intbarsys.IntbarsysApplication.logStartupProfileInfo:648 -No active profile set, falling back to default profiles: default
+2019-11-14 09:12:29.573 INFO [restartedMain]o.s.b.devtools.env.DevToolsPropertyDefaultsPostProcessor.logTo:225 -Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-11-14 09:12:29.574 INFO [restartedMain]o.s.b.devtools.env.DevToolsPropertyDefaultsPostProcessor.logTo:225 -For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-11-14 09:12:30.210 INFO [restartedMain]o.s.d.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected:244 -Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-11-14 09:12:30.212 INFO [restartedMain]o.s.d.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:126 -Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-11-14 09:12:30.239 INFO [restartedMain]o.s.d.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:182 -Finished Spring Data repository scanning in 17ms. Found 0 repository interfaces.
+2019-11-14 09:12:30.481 INFO [restartedMain]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$b94af18b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-14 09:12:30.700 INFO [restartedMain]o.s.boot.web.embedded.tomcat.TomcatWebServer.initialize:90 -Tomcat initialized with port(s): 8088 (http)
+2019-11-14 09:12:30.709 INFO [restartedMain]org.apache.coyote.http11.Http11NioProtocol.log:173 -Initializing ProtocolHandler ["http-nio-8088"]
+2019-11-14 09:12:30.715 INFO [restartedMain]org.apache.catalina.core.StandardService.log:173 -Starting service [Tomcat]
+2019-11-14 09:12:30.716 INFO [restartedMain]org.apache.catalina.core.StandardEngine.log:173 -Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-11-14 09:12:30.772 INFO [restartedMain]o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173 -Initializing Spring embedded WebApplicationContext
+2019-11-14 09:12:30.772 INFO [restartedMain]org.springframework.web.context.ContextLoader.prepareWebApplicationContext:284 -Root WebApplicationContext: initialization completed in 1198 ms
+2019-11-14 09:12:31.365 INFO [restartedMain]s.d.s.web.PropertySourcedRequestMappingHandlerMapping.initHandlerMethods:69 -Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-11-14 09:12:31.464 INFO [restartedMain]o.s.scheduling.concurrent.ThreadPoolTaskExecutor.initialize:171 -Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-14 09:12:31.499 INFO [restartedMain]o.s.boot.devtools.autoconfigure.OptionalLiveReloadServer.startServer:57 -LiveReload server is running on port 35729
+2019-11-14 09:12:31.706 INFO [restartedMain]s.d.spring.web.plugins.DocumentationPluginsBootstrapper.start:160 -Context refreshed
+2019-11-14 09:12:31.719 INFO [restartedMain]s.d.spring.web.plugins.DocumentationPluginsBootstrapper.start:163 -Found 1 custom documentation plugin(s)
+2019-11-14 09:12:31.742 INFO [restartedMain]s.d.spring.web.scanners.ApiListingReferenceScanner.scan:41 -Scanning for api listing references
+2019-11-14 09:12:31.881 INFO [restartedMain]org.apache.coyote.http11.Http11NioProtocol.log:173 -Starting ProtocolHandler ["http-nio-8088"]
+2019-11-14 09:12:31.908 INFO [restartedMain]o.s.boot.web.embedded.tomcat.TomcatWebServer.start:202 -Tomcat started on port(s): 8088 (http) with context path ''
+2019-11-14 09:12:31.911 INFO [restartedMain]com.radebit.intbarsys.IntbarsysApplication.logStarted:59 -Started IntbarsysApplication in 2.876 seconds (JVM running for 3.721)
+2019-11-14 09:12:55.281 INFO [http-nio-8088-exec-2]o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-14 09:12:55.281 INFO [http-nio-8088-exec-2]org.springframework.web.servlet.DispatcherServlet.initServletBean:524 -Initializing Servlet 'dispatcherServlet'
+2019-11-14 09:12:55.287 INFO [http-nio-8088-exec-2]org.springframework.web.servlet.DispatcherServlet.initServletBean:546 -Completed initialization in 5 ms
+2019-11-14 09:12:55.339 INFO [http-nio-8088-exec-2]com.alibaba.druid.pool.DruidDataSource.init:1003 -{dataSource-1} inited
+2019-11-14 10:57:29.464 INFO [Thread-14]o.s.scheduling.concurrent.ThreadPoolTaskExecutor.shutdown:208 -Shutting down ExecutorService 'applicationTaskExecutor'
+2019-11-14 10:57:29.492 INFO [Thread-14]com.alibaba.druid.pool.DruidDataSource.close:1965 -{dataSource-1} closing ...
+2019-11-14 10:57:29.494 INFO [Thread-14]com.alibaba.druid.pool.DruidDataSource.close:2037 -{dataSource-1} closed
+2019-11-14 10:57:34.069 INFO [restartedMain]com.radebit.intbarsys.IntbarsysApplication.logStarting:50 -Starting IntbarsysApplication on RadedeMacBook-Pro.local with PID 26267 (/Users/rade/Documents/JavaEE/intBarSys/target/classes started by rade in /Users/rade/Documents/JavaEE/intBarSys)
+2019-11-14 10:57:34.072 INFO [restartedMain]com.radebit.intbarsys.IntbarsysApplication.logStartupProfileInfo:648 -No active profile set, falling back to default profiles: default
+2019-11-14 10:57:34.133 INFO [restartedMain]o.s.b.devtools.env.DevToolsPropertyDefaultsPostProcessor.logTo:225 -Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-11-14 10:57:34.133 INFO [restartedMain]o.s.b.devtools.env.DevToolsPropertyDefaultsPostProcessor.logTo:225 -For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-11-14 10:57:34.799 INFO [restartedMain]o.s.d.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected:244 -Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-11-14 10:57:34.801 INFO [restartedMain]o.s.d.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:126 -Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-11-14 10:57:34.826 INFO [restartedMain]o.s.d.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:182 -Finished Spring Data repository scanning in 16ms. Found 0 repository interfaces.
+2019-11-14 10:57:35.056 INFO [restartedMain]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$b5b5f4ea] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-14 10:57:35.273 INFO [restartedMain]o.s.boot.web.embedded.tomcat.TomcatWebServer.initialize:90 -Tomcat initialized with port(s): 8088 (http)
+2019-11-14 10:57:35.282 INFO [restartedMain]org.apache.coyote.http11.Http11NioProtocol.log:173 -Initializing ProtocolHandler ["http-nio-8088"]
+2019-11-14 10:57:35.288 INFO [restartedMain]org.apache.catalina.core.StandardService.log:173 -Starting service [Tomcat]
+2019-11-14 10:57:35.288 INFO [restartedMain]org.apache.catalina.core.StandardEngine.log:173 -Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-11-14 10:57:35.350 INFO [restartedMain]o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173 -Initializing Spring embedded WebApplicationContext
+2019-11-14 10:57:35.350 INFO [restartedMain]org.springframework.web.context.ContextLoader.prepareWebApplicationContext:284 -Root WebApplicationContext: initialization completed in 1216 ms
+2019-11-14 10:57:35.958 INFO [restartedMain]s.d.s.web.PropertySourcedRequestMappingHandlerMapping.initHandlerMethods:69 -Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-11-14 10:57:36.052 INFO [restartedMain]o.s.scheduling.concurrent.ThreadPoolTaskExecutor.initialize:171 -Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-14 10:57:36.084 INFO [restartedMain]o.s.boot.devtools.autoconfigure.OptionalLiveReloadServer.startServer:57 -LiveReload server is running on port 35729
+2019-11-14 10:57:36.280 INFO [restartedMain]s.d.spring.web.plugins.DocumentationPluginsBootstrapper.start:160 -Context refreshed
+2019-11-14 10:57:36.294 INFO [restartedMain]s.d.spring.web.plugins.DocumentationPluginsBootstrapper.start:163 -Found 1 custom documentation plugin(s)
+2019-11-14 10:57:36.317 INFO [restartedMain]s.d.spring.web.scanners.ApiListingReferenceScanner.scan:41 -Scanning for api listing references
+2019-11-14 10:57:36.459 INFO [restartedMain]org.apache.coyote.http11.Http11NioProtocol.log:173 -Starting ProtocolHandler ["http-nio-8088"]
+2019-11-14 10:57:36.489 INFO [restartedMain]o.s.boot.web.embedded.tomcat.TomcatWebServer.start:202 -Tomcat started on port(s): 8088 (http) with context path ''
+2019-11-14 10:57:36.492 INFO [restartedMain]com.radebit.intbarsys.IntbarsysApplication.logStarted:59 -Started IntbarsysApplication in 2.881 seconds (JVM running for 3.601)
+2019-11-14 10:57:49.509 INFO [http-nio-8088-exec-1]o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-14 10:57:49.509 INFO [http-nio-8088-exec-1]org.springframework.web.servlet.DispatcherServlet.initServletBean:524 -Initializing Servlet 'dispatcherServlet'
+2019-11-14 10:57:49.516 INFO [http-nio-8088-exec-1]org.springframework.web.servlet.DispatcherServlet.initServletBean:546 -Completed initialization in 7 ms
+2019-11-14 10:57:49.527 INFO [http-nio-8088-exec-1]com.radebit.intbarsys.intercepter.AdminAuthInterceptor.preHandle:55 -管理员请求token - null 
+2019-11-14 10:59:20.003 INFO [http-nio-8088-exec-5]com.radebit.intbarsys.intercepter.AdminAuthInterceptor.preHandle:55 -管理员请求token -  
+2019-11-14 10:59:20.014 INFO [http-nio-8088-exec-5]com.radebit.intbarsys.intercepter.AdminAuthInterceptor.preHandle:64 -管理员用户 - null
+2019-11-14 10:59:32.498 INFO [http-nio-8088-exec-6]com.alibaba.druid.pool.DruidDataSource.init:1003 -{dataSource-1} inited
+2019-11-14 10:59:40.507 INFO [http-nio-8088-exec-7]com.radebit.intbarsys.intercepter.AdminAuthInterceptor.preHandle:55 -管理员请求token - 1029175ee34f10df12c1a470af180877 
+2019-11-14 10:59:40.509 INFO [http-nio-8088-exec-7]com.radebit.intbarsys.intercepter.AdminAuthInterceptor.preHandle:64 -管理员用户 - admin
+2019-11-14 10:59:40.513 INFO [http-nio-8088-exec-7]com.radebit.intbarsys.intercepter.AdminAuthInterceptor.preHandle:77 -adminToken创建时间 - 1573700372686
+2019-11-14 10:59:40.514 INFO [http-nio-8088-exec-7]com.radebit.intbarsys.intercepter.AdminAuthInterceptor.preHandle:79 -adminToken存在 - 7828 ms
+2019-11-14 10:59:48.884 INFO [http-nio-8088-exec-8]com.radebit.intbarsys.intercepter.AdminAuthInterceptor.preHandle:55 -管理员请求token - 1029175ee34f10df12c1a470af180877 
+2019-11-14 10:59:48.908 INFO [http-nio-8088-exec-8]com.radebit.intbarsys.intercepter.AdminAuthInterceptor.preHandle:64 -管理员用户 - admin
+2019-11-14 10:59:48.926 INFO [http-nio-8088-exec-8]com.radebit.intbarsys.intercepter.AdminAuthInterceptor.preHandle:77 -adminToken创建时间 - 1573700372686
+2019-11-14 10:59:48.927 INFO [http-nio-8088-exec-8]com.radebit.intbarsys.intercepter.AdminAuthInterceptor.preHandle:79 -adminToken存在 - 16241 ms
+2019-11-14 10:59:48.931 WARN [http-nio-8088-exec-8]o.s.w.s.m.m.annotation.ExceptionHandlerExceptionResolver.logException:198 -Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required String parameter 'dic_key' is not present]
+2019-11-14 10:59:54.600 INFO [http-nio-8088-exec-9]com.radebit.intbarsys.intercepter.AdminAuthInterceptor.preHandle:55 -管理员请求token - 1029175ee34f10df12c1a470af180877 
+2019-11-14 10:59:54.602 INFO [http-nio-8088-exec-9]com.radebit.intbarsys.intercepter.AdminAuthInterceptor.preHandle:64 -管理员用户 - admin
+2019-11-14 10:59:54.605 INFO [http-nio-8088-exec-9]com.radebit.intbarsys.intercepter.AdminAuthInterceptor.preHandle:77 -adminToken创建时间 - 1573700372686
+2019-11-14 10:59:54.605 INFO [http-nio-8088-exec-9]com.radebit.intbarsys.intercepter.AdminAuthInterceptor.preHandle:79 -adminToken存在 - 21919 ms
+2019-11-14 11:02:29.187 INFO [Thread-13]o.s.scheduling.concurrent.ThreadPoolTaskExecutor.shutdown:208 -Shutting down ExecutorService 'applicationTaskExecutor'
+2019-11-14 11:02:29.235 INFO [Thread-13]com.alibaba.druid.pool.DruidDataSource.close:1965 -{dataSource-1} closing ...
+2019-11-14 11:02:29.243 INFO [Thread-13]com.alibaba.druid.pool.DruidDataSource.close:2037 -{dataSource-1} closed
+2019-11-14 11:02:38.118 INFO [restartedMain]com.radebit.intbarsys.IntbarsysApplication.logStarting:50 -Starting IntbarsysApplication on RadedeMacBook-Pro.local with PID 26505 (/Users/rade/Documents/JavaEE/intBarSys/target/classes started by rade in /Users/rade/Documents/JavaEE/intBarSys)
+2019-11-14 11:02:38.123 INFO [restartedMain]com.radebit.intbarsys.IntbarsysApplication.logStartupProfileInfo:648 -No active profile set, falling back to default profiles: default
+2019-11-14 11:02:38.278 INFO [restartedMain]o.s.b.devtools.env.DevToolsPropertyDefaultsPostProcessor.logTo:225 -Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-11-14 11:02:38.279 INFO [restartedMain]o.s.b.devtools.env.DevToolsPropertyDefaultsPostProcessor.logTo:225 -For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-11-14 11:02:39.649 INFO [restartedMain]o.s.d.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected:244 -Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-11-14 11:02:39.654 INFO [restartedMain]o.s.d.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:126 -Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-11-14 11:02:39.723 INFO [restartedMain]o.s.d.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:182 -Finished Spring Data repository scanning in 41ms. Found 0 repository interfaces.
+2019-11-14 11:02:40.305 INFO [restartedMain]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$af2c1c90] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-14 11:02:40.675 INFO [restartedMain]o.s.boot.web.embedded.tomcat.TomcatWebServer.initialize:90 -Tomcat initialized with port(s): 8088 (http)
+2019-11-14 11:02:40.688 INFO [restartedMain]org.apache.coyote.http11.Http11NioProtocol.log:173 -Initializing ProtocolHandler ["http-nio-8088"]
+2019-11-14 11:02:40.698 INFO [restartedMain]org.apache.catalina.core.StandardService.log:173 -Starting service [Tomcat]
+2019-11-14 11:02:40.699 INFO [restartedMain]org.apache.catalina.core.StandardEngine.log:173 -Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-11-14 11:02:40.795 INFO [restartedMain]o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173 -Initializing Spring embedded WebApplicationContext
+2019-11-14 11:02:40.796 INFO [restartedMain]org.springframework.web.context.ContextLoader.prepareWebApplicationContext:284 -Root WebApplicationContext: initialization completed in 2517 ms
+2019-11-14 11:02:41.855 INFO [restartedMain]s.d.s.web.PropertySourcedRequestMappingHandlerMapping.initHandlerMethods:69 -Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-11-14 11:02:42.006 INFO [restartedMain]o.s.scheduling.concurrent.ThreadPoolTaskExecutor.initialize:171 -Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-14 11:02:42.052 INFO [restartedMain]o.s.boot.devtools.autoconfigure.OptionalLiveReloadServer.startServer:57 -LiveReload server is running on port 35729
+2019-11-14 11:02:42.332 INFO [restartedMain]s.d.spring.web.plugins.DocumentationPluginsBootstrapper.start:160 -Context refreshed
+2019-11-14 11:02:42.350 INFO [restartedMain]s.d.spring.web.plugins.DocumentationPluginsBootstrapper.start:163 -Found 1 custom documentation plugin(s)
+2019-11-14 11:02:42.386 INFO [restartedMain]s.d.spring.web.scanners.ApiListingReferenceScanner.scan:41 -Scanning for api listing references
+2019-11-14 11:02:42.601 INFO [restartedMain]org.apache.coyote.http11.Http11NioProtocol.log:173 -Starting ProtocolHandler ["http-nio-8088"]
+2019-11-14 11:02:42.644 INFO [restartedMain]o.s.boot.web.embedded.tomcat.TomcatWebServer.start:202 -Tomcat started on port(s): 8088 (http) with context path ''
+2019-11-14 11:02:42.648 INFO [restartedMain]com.radebit.intbarsys.IntbarsysApplication.logStarted:59 -Started IntbarsysApplication in 5.737 seconds (JVM running for 6.915)
+2019-11-14 11:03:28.043 INFO [Thread-21]o.s.scheduling.concurrent.ThreadPoolTaskExecutor.shutdown:208 -Shutting down ExecutorService 'applicationTaskExecutor'
+2019-11-14 11:03:28.084 INFO [Thread-21]com.alibaba.druid.pool.DruidDataSource.close:1965 -{dataSource-0} closing ...
+2019-11-14 11:03:34.500 INFO [restartedMain]com.radebit.intbarsys.IntbarsysApplication.logStarting:50 -Starting IntbarsysApplication on RadedeMacBook-Pro.local with PID 26521 (/Users/rade/Documents/JavaEE/intBarSys/target/classes started by rade in /Users/rade/Documents/JavaEE/intBarSys)
+2019-11-14 11:03:34.506 INFO [restartedMain]com.radebit.intbarsys.IntbarsysApplication.logStartupProfileInfo:648 -No active profile set, falling back to default profiles: default
+2019-11-14 11:03:34.659 INFO [restartedMain]o.s.b.devtools.env.DevToolsPropertyDefaultsPostProcessor.logTo:225 -Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-11-14 11:03:34.660 INFO [restartedMain]o.s.b.devtools.env.DevToolsPropertyDefaultsPostProcessor.logTo:225 -For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-11-14 11:03:36.080 INFO [restartedMain]o.s.d.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected:244 -Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-11-14 11:03:36.086 INFO [restartedMain]o.s.d.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:126 -Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-11-14 11:03:36.140 INFO [restartedMain]o.s.d.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:182 -Finished Spring Data repository scanning in 31ms. Found 0 repository interfaces.
+2019-11-14 11:03:36.694 INFO [restartedMain]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$9b35a09e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-14 11:03:37.167 INFO [restartedMain]o.s.boot.web.embedded.tomcat.TomcatWebServer.initialize:90 -Tomcat initialized with port(s): 8088 (http)
+2019-11-14 11:03:37.187 INFO [restartedMain]org.apache.coyote.http11.Http11NioProtocol.log:173 -Initializing ProtocolHandler ["http-nio-8088"]
+2019-11-14 11:03:37.199 INFO [restartedMain]org.apache.catalina.core.StandardService.log:173 -Starting service [Tomcat]
+2019-11-14 11:03:37.199 INFO [restartedMain]org.apache.catalina.core.StandardEngine.log:173 -Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-11-14 11:03:37.325 INFO [restartedMain]o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173 -Initializing Spring embedded WebApplicationContext
+2019-11-14 11:03:37.325 INFO [restartedMain]org.springframework.web.context.ContextLoader.prepareWebApplicationContext:284 -Root WebApplicationContext: initialization completed in 2664 ms
+2019-11-14 11:03:38.563 INFO [restartedMain]s.d.s.web.PropertySourcedRequestMappingHandlerMapping.initHandlerMethods:69 -Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-11-14 11:03:38.765 INFO [restartedMain]o.s.scheduling.concurrent.ThreadPoolTaskExecutor.initialize:171 -Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-14 11:03:38.847 INFO [restartedMain]o.s.boot.devtools.autoconfigure.OptionalLiveReloadServer.startServer:57 -LiveReload server is running on port 35729
+2019-11-14 11:03:39.237 INFO [restartedMain]s.d.spring.web.plugins.DocumentationPluginsBootstrapper.start:160 -Context refreshed
+2019-11-14 11:03:39.261 INFO [restartedMain]s.d.spring.web.plugins.DocumentationPluginsBootstrapper.start:163 -Found 1 custom documentation plugin(s)
+2019-11-14 11:03:39.303 INFO [restartedMain]s.d.spring.web.scanners.ApiListingReferenceScanner.scan:41 -Scanning for api listing references
+2019-11-14 11:03:39.573 INFO [restartedMain]org.apache.coyote.http11.Http11NioProtocol.log:173 -Starting ProtocolHandler ["http-nio-8088"]
+2019-11-14 11:03:39.629 INFO [restartedMain]o.s.boot.web.embedded.tomcat.TomcatWebServer.start:202 -Tomcat started on port(s): 8088 (http) with context path ''
+2019-11-14 11:03:39.635 INFO [restartedMain]com.radebit.intbarsys.IntbarsysApplication.logStarted:59 -Started IntbarsysApplication in 5.925 seconds (JVM running for 6.8)
+2019-11-14 11:03:46.564 INFO [http-nio-8088-exec-2]o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-14 11:03:46.564 INFO [http-nio-8088-exec-2]org.springframework.web.servlet.DispatcherServlet.initServletBean:524 -Initializing Servlet 'dispatcherServlet'
+2019-11-14 11:03:46.574 INFO [http-nio-8088-exec-2]org.springframework.web.servlet.DispatcherServlet.initServletBean:546 -Completed initialization in 9 ms
+2019-11-14 11:03:46.591 INFO [http-nio-8088-exec-2]com.radebit.intbarsys.intercepter.AdminAuthInterceptor.preHandle:55 -管理员请求token - 1029175ee34f10df12c1a470af180877 
+2019-11-14 11:03:46.605 INFO [http-nio-8088-exec-2]com.radebit.intbarsys.intercepter.AdminAuthInterceptor.preHandle:64 -管理员用户 - admin
+2019-11-14 11:03:46.660 INFO [http-nio-8088-exec-2]com.alibaba.druid.pool.DruidDataSource.init:1003 -{dataSource-1} inited
+2019-11-14 11:03:46.901 INFO [http-nio-8088-exec-2]com.radebit.intbarsys.intercepter.AdminAuthInterceptor.preHandle:77 -adminToken创建时间 - 1573700372686
+2019-11-14 11:03:46.901 INFO [http-nio-8088-exec-2]com.radebit.intbarsys.intercepter.AdminAuthInterceptor.preHandle:79 -adminToken存在 - 254215 ms
+2019-11-14 11:03:46.908 INFO [http-nio-8088-exec-2]com.radebit.intbarsys.intercepter.AdminAuthInterceptor.preHandle:84 -重置过期时间成功!
+2019-11-14 11:03:50.830 INFO [http-nio-8088-exec-3]com.radebit.intbarsys.intercepter.AdminAuthInterceptor.preHandle:55 -管理员请求token - 1029175ee34f10df12c1a470af180877 
+2019-11-14 11:03:50.835 INFO [http-nio-8088-exec-3]com.radebit.intbarsys.intercepter.AdminAuthInterceptor.preHandle:64 -管理员用户 - admin
+2019-11-14 11:03:50.845 INFO [http-nio-8088-exec-3]com.radebit.intbarsys.intercepter.AdminAuthInterceptor.preHandle:77 -adminToken创建时间 - 1573700626908
+2019-11-14 11:03:50.845 INFO [http-nio-8088-exec-3]com.radebit.intbarsys.intercepter.AdminAuthInterceptor.preHandle:79 -adminToken存在 - 3937 ms
+2019-11-14 11:03:54.511 INFO [http-nio-8088-exec-4]com.radebit.intbarsys.intercepter.AdminAuthInterceptor.preHandle:55 -管理员请求token - 1029175ee34f10df12c1a470af180877 
+2019-11-14 11:03:54.514 INFO [http-nio-8088-exec-4]com.radebit.intbarsys.intercepter.AdminAuthInterceptor.preHandle:64 -管理员用户 - admin
+2019-11-14 11:03:54.522 INFO [http-nio-8088-exec-4]com.radebit.intbarsys.intercepter.AdminAuthInterceptor.preHandle:77 -adminToken创建时间 - 1573700626908
+2019-11-14 11:03:54.523 INFO [http-nio-8088-exec-4]com.radebit.intbarsys.intercepter.AdminAuthInterceptor.preHandle:79 -adminToken存在 - 7615 ms
+2019-11-14 11:03:57.915 INFO [http-nio-8088-exec-5]com.radebit.intbarsys.intercepter.AdminAuthInterceptor.preHandle:55 -管理员请求token - 1029175ee34f10df12c1a470af180877 
+2019-11-14 11:03:57.918 INFO [http-nio-8088-exec-5]com.radebit.intbarsys.intercepter.AdminAuthInterceptor.preHandle:64 -管理员用户 - admin
+2019-11-14 11:03:57.923 INFO [http-nio-8088-exec-5]com.radebit.intbarsys.intercepter.AdminAuthInterceptor.preHandle:77 -adminToken创建时间 - 1573700626908
+2019-11-14 11:03:57.923 INFO [http-nio-8088-exec-5]com.radebit.intbarsys.intercepter.AdminAuthInterceptor.preHandle:79 -adminToken存在 - 11015 ms
+2019-11-14 11:05:55.698 INFO [Thread-20]o.s.scheduling.concurrent.ThreadPoolTaskExecutor.shutdown:208 -Shutting down ExecutorService 'applicationTaskExecutor'
+2019-11-14 11:05:55.730 INFO [Thread-20]com.alibaba.druid.pool.DruidDataSource.close:1965 -{dataSource-1} closing ...
+2019-11-14 11:05:55.734 INFO [Thread-20]com.alibaba.druid.pool.DruidDataSource.close:2037 -{dataSource-1} closed
+2019-11-14 11:06:00.955 INFO [restartedMain]com.radebit.intbarsys.IntbarsysApplication.logStarting:50 -Starting IntbarsysApplication on RadedeMacBook-Pro.local with PID 26538 (/Users/rade/Documents/JavaEE/intBarSys/target/classes started by rade in /Users/rade/Documents/JavaEE/intBarSys)
+2019-11-14 11:06:00.960 INFO [restartedMain]com.radebit.intbarsys.IntbarsysApplication.logStartupProfileInfo:648 -No active profile set, falling back to default profiles: default
+2019-11-14 11:06:01.079 INFO [restartedMain]o.s.b.devtools.env.DevToolsPropertyDefaultsPostProcessor.logTo:225 -Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-11-14 11:06:01.079 INFO [restartedMain]o.s.b.devtools.env.DevToolsPropertyDefaultsPostProcessor.logTo:225 -For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-11-14 11:06:02.017 INFO [restartedMain]o.s.d.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected:244 -Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-11-14 11:06:02.019 INFO [restartedMain]o.s.d.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:126 -Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-11-14 11:06:02.047 INFO [restartedMain]o.s.d.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:182 -Finished Spring Data repository scanning in 16ms. Found 0 repository interfaces.
+2019-11-14 11:06:02.339 INFO [restartedMain]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d767f034] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-14 11:06:02.634 INFO [restartedMain]o.s.boot.web.embedded.tomcat.TomcatWebServer.initialize:90 -Tomcat initialized with port(s): 8088 (http)
+2019-11-14 11:06:02.647 INFO [restartedMain]org.apache.coyote.http11.Http11NioProtocol.log:173 -Initializing ProtocolHandler ["http-nio-8088"]
+2019-11-14 11:06:02.655 INFO [restartedMain]org.apache.catalina.core.StandardService.log:173 -Starting service [Tomcat]
+2019-11-14 11:06:02.655 INFO [restartedMain]org.apache.catalina.core.StandardEngine.log:173 -Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-11-14 11:06:02.736 INFO [restartedMain]o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173 -Initializing Spring embedded WebApplicationContext
+2019-11-14 11:06:02.737 INFO [restartedMain]org.springframework.web.context.ContextLoader.prepareWebApplicationContext:284 -Root WebApplicationContext: initialization completed in 1657 ms
+2019-11-14 11:06:03.533 INFO [restartedMain]s.d.s.web.PropertySourcedRequestMappingHandlerMapping.initHandlerMethods:69 -Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-11-14 11:06:03.643 INFO [restartedMain]o.s.scheduling.concurrent.ThreadPoolTaskExecutor.initialize:171 -Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-14 11:06:03.680 INFO [restartedMain]o.s.boot.devtools.autoconfigure.OptionalLiveReloadServer.startServer:57 -LiveReload server is running on port 35729
+2019-11-14 11:06:03.914 INFO [restartedMain]s.d.spring.web.plugins.DocumentationPluginsBootstrapper.start:160 -Context refreshed
+2019-11-14 11:06:03.932 INFO [restartedMain]s.d.spring.web.plugins.DocumentationPluginsBootstrapper.start:163 -Found 1 custom documentation plugin(s)
+2019-11-14 11:06:03.961 INFO [restartedMain]s.d.spring.web.scanners.ApiListingReferenceScanner.scan:41 -Scanning for api listing references
+2019-11-14 11:06:04.142 INFO [restartedMain]org.apache.coyote.http11.Http11NioProtocol.log:173 -Starting ProtocolHandler ["http-nio-8088"]
+2019-11-14 11:06:04.178 INFO [restartedMain]o.s.boot.web.embedded.tomcat.TomcatWebServer.start:202 -Tomcat started on port(s): 8088 (http) with context path ''
+2019-11-14 11:06:04.182 INFO [restartedMain]com.radebit.intbarsys.IntbarsysApplication.logStarted:59 -Started IntbarsysApplication in 3.869 seconds (JVM running for 4.764)
+2019-11-14 11:06:14.259 INFO [http-nio-8088-exec-1]o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-14 11:06:14.259 INFO [http-nio-8088-exec-1]org.springframework.web.servlet.DispatcherServlet.initServletBean:524 -Initializing Servlet 'dispatcherServlet'
+2019-11-14 11:06:14.267 INFO [http-nio-8088-exec-1]org.springframework.web.servlet.DispatcherServlet.initServletBean:546 -Completed initialization in 8 ms
+2019-11-14 11:06:14.280 INFO [http-nio-8088-exec-1]com.radebit.intbarsys.intercepter.AdminAuthInterceptor.preHandle:55 -管理员请求token - 1029175ee34f10df12c1a470af180877 
+2019-11-14 11:06:14.295 INFO [http-nio-8088-exec-1]com.radebit.intbarsys.intercepter.AdminAuthInterceptor.preHandle:64 -管理员用户 - admin
+2019-11-14 11:06:14.339 INFO [http-nio-8088-exec-1]com.alibaba.druid.pool.DruidDataSource.init:1003 -{dataSource-1} inited
+2019-11-14 11:06:14.580 INFO [http-nio-8088-exec-1]com.radebit.intbarsys.intercepter.AdminAuthInterceptor.preHandle:77 -adminToken创建时间 - 1573700626908
+2019-11-14 11:06:14.611 INFO [http-nio-8088-exec-1]com.radebit.intbarsys.intercepter.AdminAuthInterceptor.preHandle:79 -adminToken存在 - 147703 ms
+2019-11-14 11:06:14.617 INFO [http-nio-8088-exec-1]com.radebit.intbarsys.intercepter.AdminAuthInterceptor.preHandle:84 -重置过期时间成功!
+2019-11-14 11:06:16.783 INFO [http-nio-8088-exec-3]com.radebit.intbarsys.intercepter.AdminAuthInterceptor.preHandle:55 -管理员请求token - 1029175ee34f10df12c1a470af180877 
+2019-11-14 11:06:16.785 INFO [http-nio-8088-exec-3]com.radebit.intbarsys.intercepter.AdminAuthInterceptor.preHandle:64 -管理员用户 - admin
+2019-11-14 11:06:16.790 INFO [http-nio-8088-exec-3]com.radebit.intbarsys.intercepter.AdminAuthInterceptor.preHandle:77 -adminToken创建时间 - 1573700774618
+2019-11-14 11:06:16.790 INFO [http-nio-8088-exec-3]com.radebit.intbarsys.intercepter.AdminAuthInterceptor.preHandle:79 -adminToken存在 - 2172 ms
+2019-11-14 11:06:18.087 INFO [http-nio-8088-exec-4]com.radebit.intbarsys.intercepter.AdminAuthInterceptor.preHandle:55 -管理员请求token - 1029175ee34f10df12c1a470af180877 
+2019-11-14 11:06:18.090 INFO [http-nio-8088-exec-4]com.radebit.intbarsys.intercepter.AdminAuthInterceptor.preHandle:64 -管理员用户 - admin
+2019-11-14 11:06:18.095 INFO [http-nio-8088-exec-4]com.radebit.intbarsys.intercepter.AdminAuthInterceptor.preHandle:77 -adminToken创建时间 - 1573700774618
+2019-11-14 11:06:18.095 INFO [http-nio-8088-exec-4]com.radebit.intbarsys.intercepter.AdminAuthInterceptor.preHandle:79 -adminToken存在 - 3477 ms
+2019-11-14 11:06:19.401 INFO [http-nio-8088-exec-5]com.radebit.intbarsys.intercepter.AdminAuthInterceptor.preHandle:55 -管理员请求token - 1029175ee34f10df12c1a470af180877 
+2019-11-14 11:06:19.404 INFO [http-nio-8088-exec-5]com.radebit.intbarsys.intercepter.AdminAuthInterceptor.preHandle:64 -管理员用户 - admin
+2019-11-14 11:06:19.409 INFO [http-nio-8088-exec-5]com.radebit.intbarsys.intercepter.AdminAuthInterceptor.preHandle:77 -adminToken创建时间 - 1573700774618
+2019-11-14 11:06:19.409 INFO [http-nio-8088-exec-5]com.radebit.intbarsys.intercepter.AdminAuthInterceptor.preHandle:79 -adminToken存在 - 4791 ms
+2019-11-14 11:07:28.144 INFO [Thread-17]o.s.scheduling.concurrent.ThreadPoolTaskExecutor.shutdown:208 -Shutting down ExecutorService 'applicationTaskExecutor'
+2019-11-14 11:07:28.171 INFO [Thread-17]com.alibaba.druid.pool.DruidDataSource.close:1965 -{dataSource-1} closing ...
+2019-11-14 11:07:28.178 INFO [Thread-17]com.alibaba.druid.pool.DruidDataSource.close:2037 -{dataSource-1} closed
+2019-11-14 11:07:33.673 INFO [restartedMain]com.radebit.intbarsys.IntbarsysApplication.logStarting:50 -Starting IntbarsysApplication on RadedeMacBook-Pro.local with PID 26544 (/Users/rade/Documents/JavaEE/intBarSys/target/classes started by rade in /Users/rade/Documents/JavaEE/intBarSys)
+2019-11-14 11:07:33.677 INFO [restartedMain]com.radebit.intbarsys.IntbarsysApplication.logStartupProfileInfo:648 -No active profile set, falling back to default profiles: default
+2019-11-14 11:07:33.799 INFO [restartedMain]o.s.b.devtools.env.DevToolsPropertyDefaultsPostProcessor.logTo:225 -Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-11-14 11:07:33.800 INFO [restartedMain]o.s.b.devtools.env.DevToolsPropertyDefaultsPostProcessor.logTo:225 -For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-11-14 11:07:34.964 INFO [restartedMain]o.s.d.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected:244 -Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-11-14 11:07:34.967 INFO [restartedMain]o.s.d.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:126 -Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-11-14 11:07:35.001 INFO [restartedMain]o.s.d.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:182 -Finished Spring Data repository scanning in 21ms. Found 0 repository interfaces.
+2019-11-14 11:07:35.401 INFO [restartedMain]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$85c45ed1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-14 11:07:35.778 INFO [restartedMain]o.s.boot.web.embedded.tomcat.TomcatWebServer.initialize:90 -Tomcat initialized with port(s): 8088 (http)
+2019-11-14 11:07:35.809 INFO [restartedMain]org.apache.coyote.http11.Http11NioProtocol.log:173 -Initializing ProtocolHandler ["http-nio-8088"]
+2019-11-14 11:07:35.828 INFO [restartedMain]org.apache.catalina.core.StandardService.log:173 -Starting service [Tomcat]
+2019-11-14 11:07:35.829 INFO [restartedMain]org.apache.catalina.core.StandardEngine.log:173 -Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-11-14 11:07:35.976 INFO [restartedMain]o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173 -Initializing Spring embedded WebApplicationContext
+2019-11-14 11:07:35.977 INFO [restartedMain]org.springframework.web.context.ContextLoader.prepareWebApplicationContext:284 -Root WebApplicationContext: initialization completed in 2177 ms
+2019-11-14 11:07:37.193 INFO [restartedMain]s.d.s.web.PropertySourcedRequestMappingHandlerMapping.initHandlerMethods:69 -Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-11-14 11:07:37.361 INFO [restartedMain]o.s.scheduling.concurrent.ThreadPoolTaskExecutor.initialize:171 -Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-14 11:07:37.408 INFO [restartedMain]o.s.boot.devtools.autoconfigure.OptionalLiveReloadServer.startServer:57 -LiveReload server is running on port 35729
+2019-11-14 11:07:37.721 INFO [restartedMain]s.d.spring.web.plugins.DocumentationPluginsBootstrapper.start:160 -Context refreshed
+2019-11-14 11:07:37.746 INFO [restartedMain]s.d.spring.web.plugins.DocumentationPluginsBootstrapper.start:163 -Found 1 custom documentation plugin(s)
+2019-11-14 11:07:37.791 INFO [restartedMain]s.d.spring.web.scanners.ApiListingReferenceScanner.scan:41 -Scanning for api listing references
+2019-11-14 11:07:38.063 INFO [restartedMain]org.apache.coyote.http11.Http11NioProtocol.log:173 -Starting ProtocolHandler ["http-nio-8088"]
+2019-11-14 11:07:38.116 INFO [restartedMain]o.s.boot.web.embedded.tomcat.TomcatWebServer.start:202 -Tomcat started on port(s): 8088 (http) with context path ''
+2019-11-14 11:07:38.121 INFO [restartedMain]com.radebit.intbarsys.IntbarsysApplication.logStarted:59 -Started IntbarsysApplication in 5.018 seconds (JVM running for 5.725)
+2019-11-14 11:07:46.739 INFO [http-nio-8088-exec-2]o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-14 11:07:46.739 INFO [http-nio-8088-exec-2]org.springframework.web.servlet.DispatcherServlet.initServletBean:524 -Initializing Servlet 'dispatcherServlet'
+2019-11-14 11:07:46.750 INFO [http-nio-8088-exec-2]org.springframework.web.servlet.DispatcherServlet.initServletBean:546 -Completed initialization in 10 ms
+2019-11-14 11:07:46.763 INFO [http-nio-8088-exec-2]com.radebit.intbarsys.intercepter.AdminAuthInterceptor.preHandle:55 -管理员请求token - null 
+2019-11-14 11:08:07.844 INFO [http-nio-8088-exec-3]com.radebit.intbarsys.intercepter.AdminAuthInterceptor.preHandle:55 -管理员请求token - 1029175ee34f10df12c1a470af1808771 
+2019-11-14 11:08:07.863 INFO [http-nio-8088-exec-3]com.radebit.intbarsys.intercepter.AdminAuthInterceptor.preHandle:64 -管理员用户 - null
+2019-11-14 11:08:10.194 INFO [http-nio-8088-exec-4]com.radebit.intbarsys.intercepter.AdminAuthInterceptor.preHandle:55 -管理员请求token - 1029175ee34f10df12c1a470af180877 
+2019-11-14 11:08:10.197 INFO [http-nio-8088-exec-4]com.radebit.intbarsys.intercepter.AdminAuthInterceptor.preHandle:64 -管理员用户 - admin
+2019-11-14 11:08:10.255 INFO [http-nio-8088-exec-4]com.alibaba.druid.pool.DruidDataSource.init:1003 -{dataSource-1} inited
+2019-11-14 11:08:10.554 INFO [http-nio-8088-exec-4]com.radebit.intbarsys.intercepter.AdminAuthInterceptor.preHandle:77 -adminToken创建时间 - 1573700774618
+2019-11-14 11:08:10.555 INFO [http-nio-8088-exec-4]com.radebit.intbarsys.intercepter.AdminAuthInterceptor.preHandle:79 -adminToken存在 - 115937 ms
+2019-11-14 11:08:10.559 INFO [http-nio-8088-exec-4]com.radebit.intbarsys.intercepter.AdminAuthInterceptor.preHandle:84 -重置过期时间成功!
+2019-11-14 11:08:12.113 INFO [http-nio-8088-exec-5]com.radebit.intbarsys.intercepter.AdminAuthInterceptor.preHandle:55 -管理员请求token - 1029175ee34f10df12c1a470af180877 
+2019-11-14 11:08:12.116 INFO [http-nio-8088-exec-5]com.radebit.intbarsys.intercepter.AdminAuthInterceptor.preHandle:64 -管理员用户 - admin
+2019-11-14 11:08:12.121 INFO [http-nio-8088-exec-5]com.radebit.intbarsys.intercepter.AdminAuthInterceptor.preHandle:77 -adminToken创建时间 - 1573700890560
+2019-11-14 11:08:12.121 INFO [http-nio-8088-exec-5]com.radebit.intbarsys.intercepter.AdminAuthInterceptor.preHandle:79 -adminToken存在 - 1561 ms
+2019-11-14 11:08:24.679 INFO [http-nio-8088-exec-6]com.radebit.intbarsys.intercepter.AdminAuthInterceptor.preHandle:55 -管理员请求token - 1029175ee34f10df12c1a470af180877 
+2019-11-14 11:08:24.681 INFO [http-nio-8088-exec-6]com.radebit.intbarsys.intercepter.AdminAuthInterceptor.preHandle:64 -管理员用户 - admin
+2019-11-14 11:08:24.685 INFO [http-nio-8088-exec-6]com.radebit.intbarsys.intercepter.AdminAuthInterceptor.preHandle:77 -adminToken创建时间 - 1573700890560
+2019-11-14 11:08:24.686 INFO [http-nio-8088-exec-6]com.radebit.intbarsys.intercepter.AdminAuthInterceptor.preHandle:79 -adminToken存在 - 14126 ms
+2019-11-14 11:08:45.355 INFO [http-nio-8088-exec-7]org.apache.tomcat.util.http.parser.Cookie.log:173 -A cookie header was received [1559559964,1560013448,1560083219; hblid=stfzEiCgVhCUrARo3m39N0H13obFDaBg; olfsk=olfsk48319732679414207; pgv_pvi=8939547648] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2019-11-14 11:08:57.103 INFO [Thread-18]o.s.scheduling.concurrent.ThreadPoolTaskExecutor.shutdown:208 -Shutting down ExecutorService 'applicationTaskExecutor'
+2019-11-14 11:08:57.120 INFO [Thread-18]com.alibaba.druid.pool.DruidDataSource.close:1965 -{dataSource-1} closing ...
+2019-11-14 11:08:57.123 INFO [Thread-18]com.alibaba.druid.pool.DruidDataSource.close:2037 -{dataSource-1} closed

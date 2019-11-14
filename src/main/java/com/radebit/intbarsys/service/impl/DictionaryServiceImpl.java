@@ -40,6 +40,10 @@ public class DictionaryServiceImpl implements DictionaryService {
 
     @Override
     public int save(Dictionary dictionary) {
+        //防止同名key
+        if (dictionaryMapper.findDicByKey(dictionary.getDicKey())!=null){
+            return 0;
+        }
         return dictionaryMapper.save(dictionary);
     }
 }

@@ -32,16 +32,6 @@ public class TestController {
         return "Test Success!";
     }
 
-    @GetMapping("getDicById")
-    public Dictionary getDicById(@RequestParam(value = "id",required = true) int id) {
-        return dictionaryService.findDicById(id);
-    }
-
-    @GetMapping("getDicByKey")
-    public String getDicById(@RequestParam(value = "key",required = true) String key) {
-        return dictionaryService.findDicByKey(key);
-    }
-
     @PostMapping("testHasToken")
     @AuthToken
     public JsonData testHasToken(){
