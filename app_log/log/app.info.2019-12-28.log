@@ -1,0 +1,25 @@
+2019-12-28 01:22:46.191 INFO [restartedMain]com.radebit.intbarsys.IntbarsysApplication.logStarting:50 -Starting IntbarsysApplication on RadedeMacBook-Pro.local with PID 3788 (/Users/rade/Documents/Java/intBarSys/target/classes started by rade in /Users/rade/Documents/Java/intBarSys)
+2019-12-28 01:22:46.194 INFO [restartedMain]com.radebit.intbarsys.IntbarsysApplication.logStartupProfileInfo:648 -No active profile set, falling back to default profiles: default
+2019-12-28 01:22:46.285 INFO [restartedMain]o.s.b.devtools.env.DevToolsPropertyDefaultsPostProcessor.logTo:225 -Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-12-28 01:22:46.286 INFO [restartedMain]o.s.b.devtools.env.DevToolsPropertyDefaultsPostProcessor.logTo:225 -For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-12-28 01:22:47.111 INFO [restartedMain]o.s.d.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected:244 -Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-12-28 01:22:47.114 INFO [restartedMain]o.s.d.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:126 -Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-28 01:22:47.144 INFO [restartedMain]o.s.d.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:182 -Finished Spring Data repository scanning in 18ms. Found 0 repository interfaces.
+2019-12-28 01:22:47.424 INFO [restartedMain]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$b76b6dac] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-28 01:22:47.691 INFO [restartedMain]o.s.boot.web.embedded.tomcat.TomcatWebServer.initialize:90 -Tomcat initialized with port(s): 8088 (http)
+2019-12-28 01:22:47.701 INFO [restartedMain]org.apache.coyote.http11.Http11NioProtocol.log:173 -Initializing ProtocolHandler ["http-nio-8088"]
+2019-12-28 01:22:47.709 INFO [restartedMain]org.apache.catalina.core.StandardService.log:173 -Starting service [Tomcat]
+2019-12-28 01:22:47.709 INFO [restartedMain]org.apache.catalina.core.StandardEngine.log:173 -Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-12-28 01:22:47.775 INFO [restartedMain]o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173 -Initializing Spring embedded WebApplicationContext
+2019-12-28 01:22:47.776 INFO [restartedMain]org.springframework.web.context.ContextLoader.prepareWebApplicationContext:284 -Root WebApplicationContext: initialization completed in 1490 ms
+2019-12-28 01:22:48.451 INFO [restartedMain]s.d.s.web.PropertySourcedRequestMappingHandlerMapping.initHandlerMethods:69 -Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-12-28 01:22:48.554 INFO [restartedMain]o.s.scheduling.concurrent.ThreadPoolTaskExecutor.initialize:171 -Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-28 01:22:48.590 INFO [restartedMain]o.s.boot.devtools.autoconfigure.OptionalLiveReloadServer.startServer:57 -LiveReload server is running on port 35729
+2019-12-28 01:22:48.807 INFO [restartedMain]s.d.spring.web.plugins.DocumentationPluginsBootstrapper.start:160 -Context refreshed
+2019-12-28 01:22:48.821 INFO [restartedMain]s.d.spring.web.plugins.DocumentationPluginsBootstrapper.start:163 -Found 1 custom documentation plugin(s)
+2019-12-28 01:22:48.845 INFO [restartedMain]s.d.spring.web.scanners.ApiListingReferenceScanner.scan:41 -Scanning for api listing references
+2019-12-28 01:22:48.995 INFO [restartedMain]org.apache.coyote.http11.Http11NioProtocol.log:173 -Starting ProtocolHandler ["http-nio-8088"]
+2019-12-28 01:22:49.022 INFO [restartedMain]o.s.boot.web.embedded.tomcat.TomcatWebServer.start:202 -Tomcat started on port(s): 8088 (http) with context path ''
+2019-12-28 01:22:49.025 INFO [restartedMain]com.radebit.intbarsys.IntbarsysApplication.logStarted:59 -Started IntbarsysApplication in 3.844 seconds (JVM running for 5.055)
+2019-12-28 01:22:52.253 INFO [Thread-15]o.s.scheduling.concurrent.ThreadPoolTaskExecutor.shutdown:208 -Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-28 01:22:52.269 INFO [Thread-15]com.alibaba.druid.pool.DruidDataSource.close:1965 -{dataSource-0} closing ...
